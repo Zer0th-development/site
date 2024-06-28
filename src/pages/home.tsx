@@ -49,7 +49,7 @@ function Home() {
   };
 
   return (
-    <div style={{ backgroundColor: '#000000', color: '#FFFFFF', fontFamily: 'Menlo', minHeight: '100vh', margin: 0, padding: '20px' }}>
+    <div style={{ backgroundColor: '#000000', color: '#FFFFFF', fontFamily: 'Menlo', minHeight: '100vh',  padding: '30px' }}>
       <header style={{ textAlign: 'center', padding: '40px' }}>
         <p style={{ fontSize: '20px' }}>
           Zer0th
@@ -60,10 +60,10 @@ function Home() {
       </header>
 
       <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginBottom: '40px' }}>
-        <img src={logo} alt="logo" style={{ height: '40vmin', width: '40vmin' }} />
+        <img src={logo} alt="logo" style={{ height: '400px', width: '400px' }} />
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginRight: '200px', marginLeft: '200px' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',  }}>
         <button
           style={{
             backgroundColor: '#000000',
@@ -97,9 +97,9 @@ function Home() {
       </div>
 
       {showCollaborators && (
-        <div style={{ alignItems: 'center', marginTop: '20px', backgroundColor: '#000000', padding: '20px', marginLeft: '200px' }}>
+        <div style={{ alignItems: 'center', marginTop: '20px', backgroundColor: '#000000', padding: '10px' }}>
           <p style={{ textAlign: 'left'  }}>Trusted By</p>
-          <img src={companies} alt="companies" style={{ width: '80vmin' }} />
+          <img src={companies} alt="companies" style={{ width: '90%' }} />
         </div>
       )}
 
