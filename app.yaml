@@ -1,0 +1,10 @@
+runtime: nodejs18
+
+handlers:
+- url: /(.*\.(gif|png|jpg|css|js|ico|json|svg))$
+  static_files: build/\1
+  upload: build/(.*\.(gif|png|jpg|css|js|ico|json|svg))$
+
+- url: /(.*)
+  static_files: build/index.html
+  upload: build/index.html
