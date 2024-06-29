@@ -99,7 +99,7 @@ function Home() {
       {showCollaborators && (
         <div style={{ alignItems: 'center', marginTop: '20px', backgroundColor: '#000000', padding: '10px' }}>
           <p style={{ textAlign: 'left'  }}>Trusted By</p>
-          <img src={companies} alt="companies" style={{ width: '90%' }} />
+          <img src={companies} alt="companies" style={{ width: '90%', maxWidth: '1500px' }} />
         </div>
       )}
 
