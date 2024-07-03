@@ -1,21 +1,36 @@
-// src/pages/Home.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/Zeroth1.png';
 import companies from '../assets/Companies.png';
 
 function Home() {
   const [showCollaborators, setShowCollaborators] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [showProducts, setShowProducts] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   const handleCollaboratorsClick = () => {
     setShowCollaborators(!showCollaborators);
     setShowContact(false);
+    setShowProducts(false);
   };
 
   const handleContactClick = () => {
     setShowContact(!showContact);
     setShowCollaborators(false);
+    setShowProducts(false);
+  };
+
+  const handleProductsClick = () => {
+    setShowProducts(!showProducts);
+    setShowCollaborators(false);
+    setShowContact(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +64,7 @@ function Home() {
   };
 
   return (
-    <div style={{ backgroundColor: '#000000', color: '#FFFFFF', fontFamily: 'Menlo', minHeight: '100vh',  padding: '30px' }}>
+    <div style={{ backgroundColor: '#000000', color: '#FFFFFF', fontFamily: 'Menlo', minHeight: '100vh', padding: '30px' }}>
       <header style={{ textAlign: 'center', padding: '40px' }}>
         <p style={{ fontSize: '20px' }}>
           Zer0th
@@ -63,7 +78,7 @@ function Home() {
         <img src={logo} alt="logo" style={{ height: '400px', width: '400px' }} />
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',  }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
         <button
           style={{
             backgroundColor: '#000000',
@@ -77,8 +92,25 @@ function Home() {
           }}
           onClick={handleCollaboratorsClick}
         >
-          Collaborators
+          Clients
         </button>
+        
+        <button
+          style={{
+            backgroundColor: '#000000',
+            color: '#FFFFFF',
+            fontFamily: 'Menlo',
+            fontSize: '16px',
+            padding: '10px 20px',
+            border: '2px solid #343434',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+          onClick={handleProductsClick}
+        >
+          Products + Services
+        </button>
+
         <button
           style={{
             backgroundColor: '#000000',
@@ -98,8 +130,27 @@ function Home() {
 
       {showCollaborators && (
         <div style={{ alignItems: 'center', marginTop: '20px', backgroundColor: '#000000', padding: '10px' }}>
-          <p style={{ textAlign: 'left'  }}>Trusted By</p>
-          <img src={companies} alt="companies" style={{ width: '90%', maxWidth: '1500px' }} />
+          <p style={{ textAlign: 'left' }}>Trusted By</p>
+          <img src={companies} alt="companies" style={{ width: '100%', maxWidth: '1500px' }} />
+        </div>
+      )}
+
+      {showProducts && (
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <div style={{ maxWidth: '60%', margin: '0 auto' }}>
+            <p>
+              We craft bespoke solutions tailored to each client’s unique needs.
+
+              We've had the privilege of working with creatives and entrepreneurs at the top of their respective industries, who have achieved remarkable success leveraging our expertise in:
+            </p>
+            <ul style={{ textAlign: 'left' }}>
+              <li>Web Development</li>
+              <li>Application Development</li>
+              <li>E-Commerce Development & Optimization</li>
+              <li>Product Distribution </li>
+              <li>Data Analytics </li>
+            </ul>
+          </div>
         </div>
       )}
 
@@ -108,75 +159,7 @@ function Home() {
           <p>Contact Us</p>
           <br/>
           <p>contact@0-th.com</p>
-          {/* <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              style={{
-                margin: '10px',
-                padding: '10px',
-                width: '40vmin',
-                height: '20px',
-                backgroundColor: '#000000',
-                color: '#FFFFFF',
-                border: '1px solid #343434',
-                borderRadius: '16px'
-              }}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              style={{
-                margin: '10px',
-                padding: '10px',
-                width: '40vmin',
-                height: '20px',
-                backgroundColor: '#000000',
-                color: '#FFFFFF',
-                border: '1px solid #343434',
-                borderRadius: '16px'
-              }}
-            />
-            <input
-              type="text"
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              style={{
-                margin: '10px',
-                padding: '10px',
-                width: '40vmin',
-                height: '20px',
-                backgroundColor: '#000000',
-                color: '#FFFFFF',
-                border: '1px solid #343434',
-                borderRadius: '16px'
-              }}
-            />
-            <button
-              type="submit"
-              style={{
-                backgroundColor: '#000000',
-                color: '#FFFFFF',
-                fontFamily: 'Menlo',
-                fontSize: '16px',
-                padding: '10px 20px',
-                marginTop: '20px',
-                border: '2px solid #343434',
-                borderRadius: '16px',
-                cursor: 'pointer'
-              }}
-            >
-              Send
-            </button>
-          </form> */}
+
         </div>
       )}
     </div>
