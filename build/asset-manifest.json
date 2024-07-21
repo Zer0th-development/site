@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.433871d9.css",
-    "main.js": "/static/js/main.f8753a1b.js",
+    "main.js": "/static/js/main.afb690e1.js",
     "static/js/453.adc34edb.chunk.js": "/static/js/453.adc34edb.chunk.js",
-    "static/media/Zeroth1.png": "/static/media/Zeroth1.7ee861f821e1a3dfd71e.png",
+    "static/media/Zeroth2.png": "/static/media/Zeroth2.5b9f2cc6833a1072531d.png",
     "static/media/Companies.png": "/static/media/Companies.5c8cba9e89b209d3b514.png",
     "index.html": "/index.html",
     "main.433871d9.css.map": "/static/css/main.433871d9.css.map",
-    "main.f8753a1b.js.map": "/static/js/main.f8753a1b.js.map",
+    "main.afb690e1.js.map": "/static/js/main.afb690e1.js.map",
     "453.adc34edb.chunk.js.map": "/static/js/453.adc34edb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.433871d9.css",
-    "static/js/main.f8753a1b.js"
+    "static/js/main.afb690e1.js"
   ]
 }

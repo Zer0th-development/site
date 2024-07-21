@@ -1,0 +1,84 @@
+import React, { useState } from 'react';
+
+import laptopIcon from '../assets/icons/laptop.png'; 
+import cardIcon from '../assets/icons/creditcard.png';
+import clickIcon from '../assets/icons/click.png';
+import magnifyingGlassIcon from '../assets/icons/magnifyingglass.png';
+import networkIcon from '../assets/icons/network.png';
+import peopleIcon from '../assets/icons/3person.png';
+import boxIcon from '../assets/icons/shippingbox.png';
+import trayIcon from '../assets/icons/tray.png';
+
+const services = [
+    { title: "Custom Software, Website, and App Development", icon: laptopIcon },
+    { title: "Collaborative Brand-Oriented Design", icon: laptopIcon },
+    { title: "E-Commerce Solutions and Managment", icon: cardIcon },
+    { title: "Daily Business Operations and Reporting", icon: magnifyingGlassIcon },
+    { title: "Custom Apps and Extension Integration", icon: networkIcon },
+    { title: "Customer Acquisition and Data Management", icon: peopleIcon },
+    { title: "Digital Marketing and Advertising", icon: clickIcon },
+    { title: "Product Sourcing and Distribution", icon: boxIcon },
+    { title: "Third Party Logistics", icon: boxIcon },
+    { title: "CMS for Updates and Deployments", icon: trayIcon }
+];
+
+interface ServicesProps {
+    isMobile: boolean;
+}
+
+const Services: React.FC<ServicesProps> = ({ isMobile }) => {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+    return (
+        <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(5, 1fr)',
+            gridTemplateRows: 'auto',
+            gap: '20px',
+            marginBottom: '40px',
+            padding: '30px',
+        }}>
+            {services.map((service, index) => (
+                <button 
+                    key={index} 
+                    style={{
+                        backgroundColor: '#111111',
+                        color: '#FFFFFF',
+                        padding: '10px',
+                        borderRadius: '24px',
+                        maxWidth: '220px',
+                        border: 'none',
+                        cursor: 'pointer',
+                        textAlign: 'center',
+                        fontSize: isMobile ? '12px' : '14px',
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontFamily: "'Shippori Antique B1', sans-serif",
+                        filter: hoveredIndex === index ? 'drop-shadow(0 0 10px #ffffff)' : 'none',
+                            transition: 'filter 0.2s ease'
+                    }}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                >
+                    <img 
+                        src={service.icon} 
+                        alt={service.title} 
+                        style={{ 
+                            maxHeight: '50px', 
+                            marginTop: '10px', 
+                            marginBottom: '15px',
+                            filter: hoveredIndex === index ? 'drop-shadow(0 0 2px #A3A3A3)' : 'none',
+                            transition: 'filter 0.2s ease'
+                        }} 
+                    />
+                    {service.title}
+                </button>
+            ))}
+        </div>
+    );
+};
+
+export default Services;
