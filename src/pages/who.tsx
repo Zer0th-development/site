@@ -13,13 +13,8 @@ const Who = () => {
     }, []);
     const isMobile = windowWidth <= 768;
     const faqs = [
-        { question: "Are you guys gay?", answer: "No\nNo\nMaybe Massimo" },
-        { question: "Are you guys gay?", answer: "No" },
-        { question: "Are you guys gay?", answer: "" },
-        { question: "Are you guys gay?", answer: "" },
-        { question: "Are you guys gay?", answer: "" },
-        { question: "Are you guys gay?", answer: "" },
-        { question: "Are you guys gay?", answer: "" },
+        { question: "Are you stupid gay?", answer: "No\nNo\nMaybe Massimo" },
+        { question: "Chicken or Egg?", answer: "scrambled" },
     ];
     const backClick = () => { 
         navigate('/');
