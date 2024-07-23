@@ -98,9 +98,13 @@ function Home() {
             gap: '20px',
             alignItems: isMobile ? 'center' : 'flex-start'
           }}>
-            {['Who we are', 'Portfolio', 'Contact'].map((section) => (
+            {[
+              { text: 'Who we are', onClick: handleWhoWeAreClick },
+              { text: 'Portfolio', onClick: handlePortfolioClick },
+              { text: 'Contact', onClick: handleContactClick }
+            ].map((section) => (
               <button
-                key={section}
+                key={section.text}
                 style={{
                   backgroundColor: 'transparent',
                   color: '#FFFFFF',
@@ -112,9 +116,9 @@ function Home() {
                   padding: '0',
                   marginBottom: isMobile ? '10px' : '0'
                 }}
-                onClick={section === 'Who we are' ? handleWhoWeAreClick : undefined}
+                onClick={section.onClick}
               >
-                {section} 
+                {section.text} 
                 <span style={{ marginLeft: '10px' }}>→</span>
               </button>
             ))}

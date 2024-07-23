@@ -44,8 +44,8 @@ const Who = () => {
             
             <div style={{ textAlign: 'center', marginBottom: '100px', marginTop: '100px', fontSize: '20px' }}>
                 <p>Need to put something here about bundling services into Packages,</p>
-                <p>With some cool flashy names that will WOW normies</p>
-                <p>Someone should make a component for that.</p>
+                <p></p>
+                <p>Someone should make a component for that...</p>
             </div>
             <h2 style={{ fontSize: '30px', textAlign: 'center', marginBottom: '20px' }}>Packages</h2>
             <div style={{

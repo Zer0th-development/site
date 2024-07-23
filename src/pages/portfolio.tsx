@@ -28,7 +28,11 @@ const Portfolio: React.FC = () => {
             >
                 ← Back
             </button>
-            <div>
+            <div style={{
+                position: 'absolute',
+                top: '400px',
+            }}>
+                <p style={{ color: '#FFFFFF', marginBottom: '40px' }}> Trusted By </p>
                 <img src={companies} alt="Companies" style={{ width: '100%', height: 'auto' }} />
             </div>
         </div>
