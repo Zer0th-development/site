@@ -119,34 +119,69 @@ function Home() {
             gap: '20px',
             alignItems: isMobile ? 'center' : 'flex-start',
           }}>
-            {[
-              { text: 'Who we are', onClick: handleWhoWeAreClick },
-              { text: 'Contact', onClick: handleContactClick }
-            ].map((section) => (
-              <button
-                key={section.text}
-                style={{
-                  backgroundColor: 'transparent',
-                  color: '#FFFFFF',
-                  fontSize: '20px',
-                  border: 'none',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '0',
-                  marginBottom: isMobile ? '10px' : '0'
-                }} onClick={section.onClick} > {section.text} 
-                <span style={{ marginLeft: '10px' }}>→</span>
-              </button>
-            ))}
+          <div style={{ 
+          display: 'flex', 
+          flexDirection: isMobile ? 'column' : 'row',
+          gap: '10px',
+          alignItems: isMobile ? 'center' : 'center',
+      }}>
+        <button
+          onClick={handleWhoWeAreClick}
+          style={{
+            backgroundColor: '#000000',
+            color: '#FFFFFF',
+            fontSize: '20px',
+            cursor: 'pointer',
+            padding: '5px 20px',
+            width: '200px',
+            borderRadius: '30px',
+            border: '2px solid #FFFFFF',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            marginBottom: isMobile ? '10px' : '0',
+            transition: 'all 0.3s ease',
+            fontFamily: "'Shippori Antique B1', sans-serif",
+          }}>
+          Who we are 
+        </button>
+        <button
+          onClick={handleContactClick}
+          style={{
+            backgroundColor: '#FFFFFF',
+            color: '#000000',
+            fontSize: '20px',
+            cursor: 'pointer',
+            padding: '5px 20px',
+            width: '200px',
+            borderRadius: '30px',
+            border: '2px solid #FFFFFF',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            marginBottom: isMobile ? '10px' : '0',
+            transition: 'all 0.3s ease',
+            fontFamily: "'Shippori Antique B1', sans-serif",
+          }}
+        >
+          Contact
+        </button>
+      </div>
+
           </div>
         </div>
       </div>
 
       <p style={{ fontSize: isMobile ? '16px' : '26px', marginTop: '80px', marginBottom: '40px', textAlign: 'center', maxWidth: '850px', }}> 
-      We craft bespoke solutions tailored to each client's unique needs, 
-      specializing in work with creators, artists and entrepreneurs 
-      looking for help executing on their creative vision.</p>
+      We craft bespoke solutions tailored to each client's unique needs. 
+      <br/>
+      <br/>
+      We specialize in working with creators, artists and entrepreneurs 
+      at the top of their feild looking for help executing on their creative vision.</p>
+
+      <img src="/companies.png" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
 
 
       <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 

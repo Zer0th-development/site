@@ -10,15 +10,15 @@ import boxIcon from '../assets/icons/shippingbox.png';
 import trayIcon from '../assets/icons/tray.png';
 
 const services = [
-    { title: "Custom Software, Website, and App Development", icon: laptopIcon },
+    { title: "Software, Website, and App Development", icon: laptopIcon },
     { title: "Collaborative Brand-Oriented Design", icon: laptopIcon },
     { title: "E-Commerce Solutions and Managment", icon: cardIcon },
-    { title: "Daily Business Operations and Reporting", icon: magnifyingGlassIcon },
-    { title: "Custom Apps and Extension Integration", icon: networkIcon },
+    { title: "Daily Business Operations", icon: magnifyingGlassIcon },
+    { title: "App and Extension Integration", icon: networkIcon },
     { title: "Customer Acquisition and Data Management", icon: peopleIcon },
     { title: "Digital Marketing and Advertising", icon: clickIcon },
     { title: "Product Sourcing and Distribution", icon: boxIcon },
-    { title: "Third Party Logistics", icon: boxIcon },
+    { title: "Third Party Logistics and fulfilment", icon: boxIcon },
     { title: "CMS for Updates and Deployments", icon: trayIcon }
 ];
 
@@ -37,6 +37,7 @@ const Services: React.FC<ServicesProps> = ({ isMobile }) => {
             gap: '20px',
             marginBottom: '40px',
             padding: '30px',
+            width: '100%',
         }}>
             {services.map((service, index) => (
                 <button 
@@ -51,7 +52,7 @@ const Services: React.FC<ServicesProps> = ({ isMobile }) => {
                         cursor: 'pointer',
                         textAlign: 'center',
                         fontSize: isMobile ? '12px' : '14px',
-                        height: '100%',
+                        height: '150px',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -70,7 +71,7 @@ const Services: React.FC<ServicesProps> = ({ isMobile }) => {
                             maxHeight: '50px', 
                             marginTop: '10px', 
                             marginBottom: '15px',
-                            filter: hoveredIndex === index ? 'drop-shadow(0 0 2px #A3A3A3)' : 'none',
+                            filter: hoveredIndex === index ? 'drop-shadow(0 0 2px #ffffff)' : 'none',
                             transition: 'filter 0.2s ease'
                         }} 
                     />
