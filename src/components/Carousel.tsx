@@ -12,7 +12,7 @@ const styles = `
 `;
 
 const Carousel = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);``
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
