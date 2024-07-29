@@ -112,7 +112,7 @@ function Home() {
           <p style={{ 
             fontSize: isMobile ? '16px' : '26px',
             marginBottom: '40px'
-          }}> A Software & Design Agency</p>
+          }}> A Software & Design Studio</p>
           <div style={{ 
             display: 'flex', 
             flexDirection: isMobile ? 'column' : 'row',
@@ -132,8 +132,8 @@ function Home() {
             color: '#FFFFFF',
             fontSize: '20px',
             cursor: 'pointer',
-            padding: '5px 20px',
-            width: '200px',
+            padding: '5px 5px',
+            width: '190px',
             borderRadius: '30px',
             border: '2px solid #FFFFFF',
             display: 'inline-flex',
@@ -154,7 +154,7 @@ function Home() {
             fontSize: '20px',
             cursor: 'pointer',
             padding: '5px 20px',
-            width: '200px',
+            width: '190px',
             borderRadius: '30px',
             border: '2px solid #FFFFFF',
             display: 'inline-flex',
@@ -174,14 +174,12 @@ function Home() {
         </div>
       </div>
 
-      <p style={{ fontSize: isMobile ? '16px' : '26px', marginTop: '80px', marginBottom: '40px', textAlign: 'center', maxWidth: '850px', }}> 
+      <p style={{ fontSize: isMobile ? '16px' : '26px', marginTop: '80px', marginBottom: '40px', textAlign: 'center', maxWidth: '840px', }}> 
       We craft bespoke solutions tailored to each client's unique needs. 
-      <br/>
-      <br/>
-      We specialize in working with creators, artists and entrepreneurs 
+      specializing in work with creators, artists and entrepreneurs 
       at the top of their feild looking for help executing on their creative vision.</p>
 
-      <img src="/companies.png" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
+      <img src="../assets/Companies.png" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
 
 
       <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 
