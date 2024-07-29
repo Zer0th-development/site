@@ -179,7 +179,7 @@ function Home() {
       specializing in work with creators, artists and entrepreneurs 
       at the top of their feild looking for help executing on their creative vision.</p>
 
-      <img src="../assets/Companies.png" alt="Companies image" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
+      <img src="../assets/Companies.png" alt="Several companies that Zeroth has worked with" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
 
 
       <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 
