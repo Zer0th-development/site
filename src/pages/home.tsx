@@ -6,6 +6,7 @@ import KnotModel from '../components/KnotModel';
 import Services from '../components/services';
 import Packages from '../components/packages';
 import companyImage from '../assets/Companies.png';
+import Carousel from '../components/Carousel';
 
 function Home() {
   const navigate = useNavigate();
@@ -180,6 +181,9 @@ function Home() {
       specializing in work with creators, artists and entrepreneurs 
       at the top of their feild looking for help executing on their creative vision.</p>
 
+      <div style={{ width: '100%', marginTop: '40px' }}>
+        <Carousel />
+      </div>
       <img src={companyImage} alt="Several companies that Zeroth has worked with" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
 
 
