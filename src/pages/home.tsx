@@ -5,6 +5,7 @@ import { OrbitControls, Environment } from '@react-three/drei';
 import KnotModel from '../components/KnotModel';
 import Services from '../components/services';
 import Packages from '../components/packages';
+import companyImage from '../assets/Companies.png';
 
 function Home() {
   const navigate = useNavigate();
@@ -179,7 +180,7 @@ function Home() {
       specializing in work with creators, artists and entrepreneurs 
       at the top of their feild looking for help executing on their creative vision.</p>
 
-      <img src="../assets/Companies.png" alt="Several companies that Zeroth has worked with" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
+      <img src={companyImage} alt="Several companies that Zeroth has worked with" style={{ width: '100%', maxWidth: '1000px', marginBottom: '40px' }} />
 
 
       <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 
