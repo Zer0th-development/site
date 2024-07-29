@@ -102,7 +102,7 @@ function Home() {
             marginBottom: isMobile ? '-20px' : '-50px',
             letterSpacing: '0.1em' 
           }}>
-            ZEROTH JOE
+            ZEROTH
           </h1>
           <h2 style={{ 
             fontSize: isMobile ? '22px' : '47px', 
