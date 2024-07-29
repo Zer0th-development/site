@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/Zeroth2.png'; 
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Environment } from '@react-three/drei';
+import KnotModel from '../components/KnotModel';
+import Services from '../components/services';
+import Packages from '../components/packages';
 
 function Home() {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -12,7 +17,20 @@ function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const isMobile = windowWidth <= 768;
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const preventDefault = (e: Event) => e.preventDefault();
+      canvas.addEventListener('wheel', preventDefault, { passive: true });
+      canvas.addEventListener('touchmove', preventDefault, { passive: true });
+      canvas.addEventListener('click', preventDefault);
+      return () => {
+        canvas.removeEventListener('wheel', preventDefault);
+        canvas.removeEventListener('touchmove', preventDefault);
+        canvas.removeEventListener('click', preventDefault);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = 'auto';
@@ -21,17 +39,18 @@ function Home() {
     };
   }, []);
 
+  const isMobile = windowWidth <= 768;
+
   const handleWhoWeAreClick = () => {
-    navigate('/who');
+    const windowHeight = window.innerHeight;
+    const scrollDistance = windowHeight * 0.8;
+    
+    window.scrollTo({
+      top: window.scrollY + scrollDistance,
+      behavior: 'smooth'
+    });
   };
-
-  const handleContactClick = () => {
-    navigate('/contact');
-  };
-
-  const handlePortfolioClick = () => {
-    navigate('/portfolio');
-  };
+  const handleContactClick = () => navigate('/contact');
 
   return (
     <div style={{ 
@@ -55,16 +74,23 @@ function Home() {
         width: '100%',
         height: isMobile ? 'auto' : '90vh',
       }}>
-        <img 
-          src={logo} 
-          alt="Zeroth logo" 
-          style={{ 
+        <div 
+          ref={canvasRef}
+          style={{
             height: isMobile ? '450px' : '800px', 
             width: isMobile ? '450px' : '800px',
             marginBottom: isMobile ? '-100px' : '0',
             order: isMobile ? 0 : 1,
-          }} 
-        />
+            pointerEvents: 'none',
+          }}
+        >
+          <Canvas style={{ height: '100%', width: '100%' }}>
+            <ambientLight intensity={0} />
+            <KnotModel />
+            <Environment preset="sunset" />
+            <OrbitControls enabled={false} />
+          </Canvas>
+        </div>
         <div style={{
           textAlign: isMobile ? 'center' : 'left',
           marginLeft: isMobile ? '0' : '40px',
@@ -82,25 +108,19 @@ function Home() {
             fontSize: isMobile ? '22px' : '47px', 
             fontWeight: 'normal', 
             marginBottom: isMobile ? '20px' : '0px' 
-          }}>
-          DEVELOPMENT
-          </h2>
+          }}> DEVELOPMENT </h2>
           <p style={{ 
             fontSize: isMobile ? '16px' : '26px',
             marginBottom: '40px'
-          }}>
-            A Software & Design Agency
-          </p>
-          
+          }}> A Software & Design Agency</p>
           <div style={{ 
             display: 'flex', 
             flexDirection: isMobile ? 'column' : 'row',
             gap: '20px',
-            alignItems: isMobile ? 'center' : 'flex-start'
+            alignItems: isMobile ? 'center' : 'flex-start',
           }}>
             {[
               { text: 'Who we are', onClick: handleWhoWeAreClick },
-              { text: 'Portfolio', onClick: handlePortfolioClick },
               { text: 'Contact', onClick: handleContactClick }
             ].map((section) => (
               <button
@@ -115,17 +135,39 @@ function Home() {
                   alignItems: 'center',
                   padding: '0',
                   marginBottom: isMobile ? '10px' : '0'
-                }}
-                onClick={section.onClick}
-              >
-                {section.text} 
+                }} onClick={section.onClick} > {section.text} 
                 <span style={{ marginLeft: '10px' }}>→</span>
               </button>
             ))}
           </div>
         </div>
       </div>
-    </div>
+
+      <p style={{ fontSize: isMobile ? '16px' : '26px', marginTop: '80px', marginBottom: '40px', textAlign: 'center', maxWidth: '850px', }}> 
+      We craft bespoke solutions tailored to each client's unique needs, 
+      specializing in work with creators, artists and entrepreneurs 
+      looking for help executing on their creative vision.</p>
+
+
+      <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 
+          }}> Services </h2>
+      <p style={{ fontSize: isMobile ? '16px' : '26px', marginBottom: '10px', textAlign: 'center', maxWidth: '850px', }}> 
+      Each client receives weekly development and design meetings 
+      throughout the project, along with comprehensive project 
+      roadmapping and detailed reporting.</p>
+      
+      <Services isMobile={isMobile} />
+
+      <h2 style={{ fontSize: isMobile ? '18px' : '40px', fontWeight: 'normal', marginBottom: isMobile ? '-20px' : '-10px' 
+          }}> Packages </h2>
+      <p style={{ fontSize: isMobile ? '16px' : '26px', marginBottom: '10px', textAlign: 'center', maxWidth: '850px', }}> 
+      Whether you need to complete a single project, optimize and manage your entire business, 
+      or explore the possibilities of building a larger, more complex project, 
+      we have the team and resources to meet your needs.</p>
+
+      <Packages />
+      
+    </div>   
   );
 }
 

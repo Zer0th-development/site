@@ -61,7 +61,6 @@ const Who = () => {
                         borderRadius: '10px',
                         aspectRatio: '2/3'
                     }}>
-                        {/* Package content goes here */}
                     </div>
                 ))}
             </div>

@@ -1,17 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.433871d9.css",
-    "main.js": "/static/js/main.53bf7a99.js",
+    "main.js": "/static/js/main.a5585463.js",
     "static/js/453.adc34edb.chunk.js": "/static/js/453.adc34edb.chunk.js",
-    "static/media/Zeroth2.png": "/static/media/Zeroth2.5b9f2cc6833a1072531d.png",
     "static/media/Companies.png": "/static/media/Companies.5c8cba9e89b209d3b514.png",
     "index.html": "/index.html",
     "main.433871d9.css.map": "/static/css/main.433871d9.css.map",
-    "main.53bf7a99.js.map": "/static/js/main.53bf7a99.js.map",
+    "main.a5585463.js.map": "/static/js/main.a5585463.js.map",
     "453.adc34edb.chunk.js.map": "/static/js/453.adc34edb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.433871d9.css",
-    "static/js/main.53bf7a99.js"
+    "static/js/main.a5585463.js"
   ]
 }
