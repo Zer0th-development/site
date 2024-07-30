@@ -5,8 +5,8 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import KnotModel from "../components/KnotModel";
 import Services from "../components/services";
 import Packages from "../components/packages";
-import companyImage from "../assets/Companies.png";
 import Carousel from "../components/Carousel";
+import CompanyGallery from "../components/CompanyGallery";
 
 function Home() {
   const navigate = useNavigate();
@@ -54,22 +54,21 @@ function Home() {
   };
   const handleContactClick = () => navigate("/contact");
 
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 120) { 
+      if (scrollPosition > 120) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -221,7 +220,7 @@ function Home() {
       </div>
 
       <p
-        className={isVisible ? 'visible-text' : 'hidden-text'}
+        className={isVisible ? "visible-text" : "hidden-text"}
         style={{
           fontSize: isMobile ? "16px" : "26px",
           marginBottom: "40px",
@@ -237,11 +236,10 @@ function Home() {
       <div style={{ width: "90%", marginTop: "40px" }}>
         <Carousel />
       </div>
-      <img
-        src={companyImage}
-        alt="Several companies that Zeroth has worked with"
-        style={{ width: "100%", maxWidth: "1000px", marginBottom: "40px" }}
-      />
+
+      <div style={{ marginTop: "80px" }}>
+        <CompanyGallery />
+      </div>
 
       <h2
         style={{
@@ -265,7 +263,7 @@ function Home() {
         the project, along with comprehensive project roadmapping and detailed
         reporting.
       </p>
-      
+
       <Services isMobile={isMobile} />
 
       <h2
