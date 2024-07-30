@@ -13,15 +13,15 @@ const styles = `
 const Carousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // const scroll = (direction: 'left' | 'right') => {
+  //   if (scrollContainerRef.current) {
+  //     const scrollAmount = scrollContainerRef.current.clientWidth;
+  //     scrollContainerRef.current.scrollBy({
+  //       left: direction === 'left' ? -scrollAmount : scrollAmount,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
   return (
     <>
