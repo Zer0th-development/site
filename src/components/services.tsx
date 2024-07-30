@@ -34,10 +34,9 @@ const Services: React.FC<ServicesProps> = ({ isMobile }) => {
             display: 'grid',
             gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(5, 1fr)',
             gridTemplateRows: 'auto',
-            gap: '20px',
+            gap: '30px',
             marginBottom: '40px',
             padding: '30px',
-            width: '100%',
         }}>
             {services.map((service, index) => (
                 <button 
@@ -58,8 +57,8 @@ const Services: React.FC<ServicesProps> = ({ isMobile }) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontFamily: "'Shippori Antique B1', sans-serif",
-                        filter: hoveredIndex === index ? 'drop-shadow(0 0 10px #ffffff)' : 'none',
-                            transition: 'filter 0.2s ease'
+                        // filter: hoveredIndex === index ? 'drop-shadow(0 0 10px #ffffff)' : 'none',
+                        transition: 'filter 0.2s ease'
                     }}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}

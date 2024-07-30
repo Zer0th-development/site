@@ -44,7 +44,7 @@ const KnotModel: React.FC = () => {
     <primitive
       object={obj}
       ref={primitiveRef}
-      scale={[0.5, 0.5, 0.5]}
+      scale={[0.65, 0.65, 0.65]}
       position={[0, 0, 0]}
     />
   );

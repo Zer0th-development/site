@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
 
 const styles = `
   .hide-scrollbar {
@@ -52,40 +51,6 @@ const Carousel = () => {
             />
           ))}
         </div>
-        <button
-          onClick={() => scroll('left')}
-          style={{
-            position: 'absolute',
-            left: '16px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '50%',
-            padding: '8px',
-            cursor: 'pointer'
-          }}
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          onClick={() => scroll('right')}
-          style={{
-            position: 'absolute',
-            right: '16px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '50%',
-            padding: '8px',
-            cursor: 'pointer'
-          }}
-        >
-          <ChevronRight size={24} />
-        </button>
       </div>
     </>
   );

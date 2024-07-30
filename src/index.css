@@ -9,3 +9,17 @@ code {
   font-family: Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.hidden-text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.visible-text {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
