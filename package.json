@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://0-th.com",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.109.2",
     "@react-three/postprocessing": "^2.16.2",
     "@testing-library/jest-dom": "^5.17.0",

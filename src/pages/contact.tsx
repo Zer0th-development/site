@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
     const navigate = useNavigate();
@@ -8,6 +9,18 @@ const Contact: React.FC = () => {
         email: '',
         message: ''
     });
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+    useEffect(() => {
+        emailjs.init({
+            publicKey: 'trJfMx9IiwLMopdGv',
+            blockHeadless: true,
+            blockList: {
+                list: [/* INSERT_BLOCKED_EMAILS */],
+                watchVariable: 'email',
+            },
+        });
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -17,12 +30,21 @@ const Contact: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log(formData);
-        // Reset form after submission
-        setFormData({ name: '', email: '', message: '' });
+        setSubmitStatus('sending');
+        try {
+            await emailjs.send("service_ws19cml", "template_hizmh5i", {
+                email: formData.email,
+                name: formData.name,
+                message: formData.message,
+            });
+            setSubmitStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            setSubmitStatus('error');
+        }
     };
 
     return (
@@ -66,6 +88,7 @@ const Contact: React.FC = () => {
                             borderRadius: '5px',
                             color: '#FFFFFF'
                         }}
+                        required
                     />
                 </div>
 
@@ -86,6 +109,7 @@ const Contact: React.FC = () => {
                             borderRadius: '5px',
                             color: '#FFFFFF'
                         }}
+                        required
                     />
                 </div>
 
@@ -106,24 +130,33 @@ const Contact: React.FC = () => {
                             color: '#FFFFFF',
                             minHeight: '150px'
                         }}
+                        required
                     />
                 </div>
 
                 <button
                     type="submit"
+                    disabled={submitStatus === 'sending'}
                     style={{
                         width: '100%',
                         padding: '10px',
-                        backgroundColor: '#FFFFFF',
+                        backgroundColor: submitStatus === 'sending' ? '#666' : '#FFFFFF',
                         color: '#000000',
                         border: 'none',
                         borderRadius: '5px',
                         fontSize: '16px',
-                        cursor: 'pointer'
+                        cursor: submitStatus === 'sending' ? 'not-allowed' : 'pointer'
                     }}
                 >
-                    Send
+                    {submitStatus === 'sending' ? 'Sending...' : 'Send'}
                 </button>
+
+                {submitStatus === 'success' && (
+                    <p style={{ color: 'green', marginTop: '10px' }}>Message sent successfully!</p>
+                )}
+                {submitStatus === 'error' && (
+                    <p style={{ color: 'red', marginTop: '10px' }}>Failed to send message. Please try again.</p>
+                )}
             </form>
 
             <div style={{ textAlign: 'center', marginTop: '40px' }}>
