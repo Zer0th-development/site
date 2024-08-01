@@ -233,8 +233,8 @@ function Home() {
         of their feild looking for help executing on their creative vision.
       </p>
 
-      <div style={{ width: "90%", marginTop: "40px" }}>
-        <Carousel />
+      <div style={{ width: "100%", marginTop: "40px", overflow: "hidden" }}>
+        <Carousel autoScrollSpeed={50} />
       </div>
 
       <div style={{ marginTop: "80px" }}>
