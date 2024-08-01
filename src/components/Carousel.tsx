@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import one from '../assets/one.png';
 import two from '../assets/two.png';
+import three from '../assets/three.png';
 
 const styles = `
   .hide-scrollbar {
@@ -61,15 +62,17 @@ const Carousel: React.FC<CarouselProps> = ({ autoScrollSpeed = 50 }) => {
   const renderItems = () => {
     const items = [
       <div key="item1" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#000000', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start', overflow: 'hidden' }}>
-        <img src={one} alt="First image" style={{ height: '100%',  objectFit: 'cover' }} />
+        <img src={one} alt="YZY App 1" style={{ height: '100%', objectFit: 'cover' }} />
       </div>,
       <div key="item2" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#000000', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start', overflow: 'hidden' }}>
-        <img src={two} alt="Second image" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+        <img src={two} alt="YZY App 2" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
       </div>,
-      <div key="item3" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#a3a3a3', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start' }} />,
+      <div key="item3" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#000000', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start', overflow: 'hidden', alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
+        <img src={three} alt="Linkedin" style={{ height: '100%', objectFit: 'contain' }} /> 
+      </div>,
       <div key="item4" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#a3a3a3', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start' }} />,
       <div key="item5" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#a3a3a3', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start' }} />,
-      <div key="item5" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#a3a3a3', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start' }} />,
+      <div key="item6" style={{ flexShrink: 0, width: '320px', height: '320px', backgroundColor: '#a3a3a3', borderRadius: '8px', marginRight: '16px', scrollSnapAlign: 'start' }} />,
     ];
 
     return [...items, ...items, ...items];
