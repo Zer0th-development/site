@@ -5,7 +5,6 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import KnotModel from "../components/KnotModel";
 import Services from "../components/services";
 import Packages from "../components/packages";
-import CompanyGallery from "../components/CompanyGallery";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
 
@@ -59,7 +58,6 @@ function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
       const textElement = document.getElementById('fade-in-text');
       if (textElement) {
