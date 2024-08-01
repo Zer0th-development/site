@@ -17,8 +17,8 @@ const services = [
     { title: "App and Extension Integration", icon: networkIcon },
     { title: "Customer Acquisition and Data Management", icon: peopleIcon },
     { title: "Digital Marketing and Advertising", icon: clickIcon },
-    { title: "Product Sourcing and Distribution", icon: boxIcon },
-    { title: "Third Party Logistics and fulfilment", icon: boxIcon },
+    { title: "Product Sourcing, Distribution and Fulfilment", icon: boxIcon },
+    { title: "AI Finetuning and Implementation", icon: boxIcon },
     { title: "CMS for Updates and Deployments", icon: trayIcon }
 ];
 

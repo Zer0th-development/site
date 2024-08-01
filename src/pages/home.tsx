@@ -5,8 +5,9 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import KnotModel from "../components/KnotModel";
 import Services from "../components/services";
 import Packages from "../components/packages";
-import Carousel from "../components/Carousel";
 import CompanyGallery from "../components/CompanyGallery";
+import Carousel from "../components/Carousel";
+import Companies from "../components/Companies";
 
 function Home() {
   const navigate = useNavigate();
@@ -59,10 +60,15 @@ function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 120) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      const viewportHeight = window.innerHeight;
+      const textElement = document.getElementById('fade-in-text');
+      if (textElement) {
+        const elementTop = textElement.getBoundingClientRect().top;
+        if (elementTop < viewportHeight * 0.75) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       }
     };
 
@@ -88,6 +94,7 @@ function Home() {
         overflowY: "auto",
       }}
     >
+
       <div
         style={{
           display: "flex",
@@ -128,7 +135,7 @@ function Home() {
             style={{
               fontSize: isMobile ? "36px" : "80px",
               fontWeight: "normal",
-              marginBottom: isMobile ? "-20px" : "-50px",
+              marginBottom: isMobile ? "-20px" : "0px",
               letterSpacing: "0.1em",
             }}
           >
@@ -139,18 +146,18 @@ function Home() {
               fontSize: isMobile ? "22px" : "47px",
               fontWeight: "normal",
               marginBottom: isMobile ? "20px" : "0px",
+              textAlign: 'center',
             }}
           >
-            {" "}
-            DEVELOPMENT{" "}
           </h2>
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
               marginBottom: "40px",
+              fontWeight: "400",
+              textAlign: "center",
             }}
           >
-            {" "}
             A Software & Design Studio
           </p>
           <div
@@ -220,25 +227,26 @@ function Home() {
       </div>
 
       <p
-        className={isVisible ? "visible-text" : "hidden-text"}
+        id="fade-in-text"
+        className={`transition-opacity duration-1000 ease-in-out ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{
           fontSize: isMobile ? "16px" : "26px",
           marginBottom: "40px",
+          marginTop: "100px",
           textAlign: "center",
           maxWidth: "840px",
         }}
       >
-        We craft bespoke solutions tailored to each client's unique needs.
-        specializing in work with creators, artists and entrepreneurs at the top
-        of their feild looking for help executing on their creative vision.
+        We craft bespoke solutions tailored to each client's unique needs
+        specializing in work with creators, artists and entrepreneurs
+        looking for help executing on their creative vision.
       </p>
 
-      <div style={{ width: "100%", marginTop: "40px", overflow: "hidden" }}>
-        <Carousel autoScrollSpeed={50} />
-      </div>
-
-      <div style={{ marginTop: "80px" }}>
-        <CompanyGallery />
+      <div className="mt-10 mb-20">
+      <Carousel duration="15s" />
+      <Companies duration="15s" reverse={true} />
       </div>
 
       <h2

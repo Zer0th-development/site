@@ -1,24 +1,28 @@
 import React from 'react';
 import Marquee from "../@/components/magicui/marquee";
-import one from "../assets/one.png";  
-import two from "../assets/two.png";
-import three from "../assets/three.png";
-import clothesapp from "../assets/clothesapp.png";
+import companyImage1 from "../assets/companies/1.png";
+import companyImage2 from "../assets/companies/2.png";
+import companyImage3 from "../assets/companies/3.png";
+import companyImage4 from "../assets/companies/4.png";
+import companyImage5 from "../assets/companies/5.png";
 
-interface CarouselProps {
+interface CompaniesProps {
   duration?: string;
   pauseOnHover?: boolean;
+  reverse?: boolean;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ 
+const Companies: React.FC<CompaniesProps> = ({ 
   duration = "15s", 
-  pauseOnHover = true 
+  pauseOnHover = true,
+  reverse = false 
 }) => {
-  const carouselItems = [
-    { src: one, alt: "Image One" },
-    { src: two, alt: "Image Two" },
-    { src: three, alt: "Image Three" },
-    { src: clothesapp, alt: "Image Three" },
+  const companiesItems = [
+    { src: companyImage1, alt: "Image One" },
+    { src: companyImage2, alt: "Image Two" },
+    { src: companyImage3, alt: "Image Three" },
+    { src: companyImage4, alt: "Image Three" },
+    { src: companyImage5, alt: "Image Three" },
   ];
 
   return (
@@ -28,14 +32,15 @@ const Carousel: React.FC<CarouselProps> = ({
       <Marquee 
         className="py-4" 
         pauseOnHover={pauseOnHover}
+        reverse={reverse}
         style={{ "--duration": duration } as React.CSSProperties}
       >
-        {carouselItems.map((item, index) => (
+        {companiesItems.map((item, index) => (
           <div key={index} className="mx-4 inline-block">
             <img 
               src={item.src} 
               alt={item.alt} 
-              className="h-80 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
         ))}
@@ -44,4 +49,4 @@ const Carousel: React.FC<CarouselProps> = ({
   );
 };
 
-export default Carousel;
+export default Companies;
