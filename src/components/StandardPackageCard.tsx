@@ -1,7 +1,7 @@
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
 import "../App.css";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import StandardBadge from "./StandardBadge";
+// import StandardBadge from "./StandardBadge";
 
 const StandardPackageCard = () => {
     const firstColor = "#e3e3e3";
