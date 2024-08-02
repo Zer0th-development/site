@@ -269,11 +269,11 @@ function Home() {
         style={{
           fontSize: isMobile ? "18px" : "40px",
           fontWeight: "normal",
-          marginBottom: isMobile ? "-20px" : "-10px"
+          marginBottom: isMobile ? "-20px" : "-10px",
         }}
       >
-        {" "}
-        Packages{" "}
+        
+        Packages
       </h2>
       <p
         style={{

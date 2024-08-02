@@ -4,17 +4,11 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import StandardBadge from "./StandardBadge";
 
 const StandardPackageCard: React.FC = () => {
-  const firstColor = "#e3e3e3";
-  const secondColor = "#652A94";
+    const firstColor = "#e3e3e3";
+    const secondColor = "#ffffff";
   return (
     <div
-      style={{
-        fontFamily: "'Shippori Antique B1', sans-serif",
-        height: "700px",
-        width: "400px",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
+    style={{ fontFamily: "'Shippori Antique B1', sans-serif", height: '800px', width:'475px', alignItems: 'center', justifyContent: 'center'}} 
     >
       <NeonGradientCard
         neonColors={{ firstColor, secondColor }}
