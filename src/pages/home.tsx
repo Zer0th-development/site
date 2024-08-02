@@ -7,7 +7,6 @@ import Services from "../components/services";
 import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
-import PackageCard from "../components/StandardPackageCard";
 
 
 

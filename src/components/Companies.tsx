@@ -25,7 +25,7 @@ const Companies: React.FC<CompaniesProps> = ({
     { src: companyImage5, alt: "Image Three" },
   ];
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth] = useState(window.innerWidth);
 
   const isMobile = windowWidth <= 768;
 
