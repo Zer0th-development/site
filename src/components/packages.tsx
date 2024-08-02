@@ -43,8 +43,8 @@ const Packages = () => {
                 index === currentIndex
                   ? "z-20 scale-100 opacity-100"
                   : index === (currentIndex + 1) % 3
-                  ? "z-10 scale-90 opacity-30 translate-x-1/6 sm:translate-x-1/4"
-                  : "z-10 scale-90 opacity-30 -translate-x-1/6 sm:-translate-x-1/4"
+                  ? "z-10 scale-90 opacity-30 translate-x-3/4"
+                  : "z-10 scale-90 opacity-30 -translate-x-3/4"
               }`}
             >
               <PackageComponent />
