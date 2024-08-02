@@ -83,7 +83,6 @@ const NeonGradientCard = ({
 
   useEffect(() => {
     const updateDimensions = () => {
-      console.log("updateDimensions useEffect");
       if (containerRef.current) {
         const { offsetWidth, offsetHeight } = containerRef.current;
         setDimensions({ width: offsetWidth, height: offsetHeight });
@@ -91,21 +90,19 @@ const NeonGradientCard = ({
     };
 
     updateDimensions();
-    // window.addEventListener("resize", updateDimensions);
+    window.addEventListener("resize", updateDimensions);
 
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
   }, []);
 
-  // useEffect(() => {
-  //   console.log("children useEffect");
-    
-  //   if (containerRef.current) {
-  //     const { offsetWidth, offsetHeight } = containerRef.current;
-  //     setDimensions({ width: offsetWidth, height: offsetHeight });
-  //   }
-  // }, [children]);
+  useEffect(() => {
+    if (containerRef.current) {
+      const { offsetWidth, offsetHeight } = containerRef.current;
+      setDimensions({ width: offsetWidth, height: offsetHeight });
+    }
+  }, [children]);
 
   return (
     <div
