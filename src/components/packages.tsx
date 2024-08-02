@@ -16,7 +16,7 @@ const Packages = () => {
     setCurrentIndex(prevIndex => (prevIndex - 1 + 3) % 3);
   };
 
-  const isMobile = windowWidth <= 768;
+  
 
   const packageComponents = [
     StandardPackageCard,
