@@ -183,7 +183,8 @@ function Home() {
               }}
             >
               <ShimmerButton
-                shimmerSize="2px"
+                shimmerSize="3px"
+                shimmerColor="#A3A3A3"
                 className={`bg-black text-white text-lg cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${isMobile ? '2.5' : '0'} transition-all duration-300 ease-in-out`}
                 onClick={handleWhoWeAreClick}
               >
