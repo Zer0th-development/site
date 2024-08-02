@@ -6,7 +6,7 @@ import CustomPackageCard from './CustomPackageCard';
 
 const Packages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowWidth] = useState(window.innerWidth);
+  
 
   const nextPackage = () => {
     setCurrentIndex(prevIndex => (prevIndex + 1) % 3);

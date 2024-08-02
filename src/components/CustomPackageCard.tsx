@@ -1,7 +1,7 @@
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
 import '../App.css';
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import StandardBadge from "./StandardBadge";
+
 
 
 
