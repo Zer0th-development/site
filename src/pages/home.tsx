@@ -154,7 +154,9 @@ function Home() {
               marginBottom: isMobile ? "20px" : "0px",
               textAlign: "center"
             }}
-          >DEVELOPMENT</h2>
+          >
+            DEVELOPMENT
+          </h2>
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
@@ -185,7 +187,9 @@ function Home() {
               <ShimmerButton
                 shimmerSize="3px"
                 shimmerColor="#A3A3A3"
-                className={`bg-black text-white text-lg cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${isMobile ? '2.5' : '0'} transition-all duration-300 ease-in-out`}
+                className={`bg-black text-white text-lg cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${
+                  isMobile ? "2.5" : "0"
+                } transition-all duration-300 ease-in-out`}
                 onClick={handleWhoWeAreClick}
               >
                 Who we are
@@ -269,10 +273,9 @@ function Home() {
         style={{
           fontSize: isMobile ? "18px" : "40px",
           fontWeight: "normal",
-          marginBottom: isMobile ? "-20px" : "-10px",
+          marginBottom: isMobile ? "-20px" : "-10px"
         }}
       >
-        
         Packages
       </h2>
       <p

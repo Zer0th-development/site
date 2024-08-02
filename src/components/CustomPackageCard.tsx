@@ -39,7 +39,7 @@ const StandardPackageCard: React.FC = () => {
                             "Personalized consultation to define your unique requirements",
                             "Scalable solutions adaptable to your evolving needs",
                             "Flexible engagement models (time & materials, milestone-based, etc.)",
-                            "OOngoing support and maintenance options"
+                            "Ongoing support and maintenance options"
                         ].map((item, index) => (
                             <li key={index} className="flex items-start">
                                 <IoIosCheckmarkCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />

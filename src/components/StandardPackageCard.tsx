@@ -22,8 +22,8 @@ const StandardPackageCard: React.FC = () => {
         <h2 className="text-xl font-semibold mb-2">You Need:</h2>
         <ul className="text-gray-400 space-y-3 ml-7 mb-2">
           {[
-            "To Build a new (or rebuild) website, app or software solution",
-            "Brand oriented & user friendly UI/UX",
+            "To build a new (or rebuild) website, app or software solution",
+            "Brand oriented & User friendly UI/UX",
             "Integrations with essential apps & extensions"
           ].map((item, index) => (
             <li key={index} className="flex items-start">
