@@ -5,8 +5,8 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import KnotModel from "../components/KnotModel";
 import Services from "../components/services";
 import Packages from "../components/packages";
-// import Carousel from "../components/Carousel";
-// import Companies from "../components/Companies";
+import Carousel from "../components/Carousel";
+import Companies from "../components/Companies";
 import ShimmerButton from "../components/magicui/shimmer-button";
 
 function Home() {
@@ -239,11 +239,11 @@ function Home() {
         specializing in work with creators, artists and entrepreneurs looking
         for help executing on their creative vision.
       </p>
-{/* 
+
       <div className="mt-10 mb-20">
         <Carousel duration="15s" />
         <Companies duration="20s" reverse={true} />
-      </div> */}
+      </div>
 
       <h2
         style={{

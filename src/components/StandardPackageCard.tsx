@@ -16,7 +16,7 @@ const StandardPackageCard = () => {
         borderSize={2}
         borderRadius={15}
       >
-        <StandardBadge />
+        {/* <StandardBadge /> */}
 
         <h1 className="text-4xl font-bold text-center mb-6">Project</h1>
 
