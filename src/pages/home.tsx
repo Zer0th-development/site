@@ -140,7 +140,7 @@ function Home() {
             style={{
               fontSize: isMobile ? "36px" : "80px",
               fontWeight: "normal",
-              marginBottom: isMobile ? "-20px" : "0px",
+              marginBottom: isMobile ? "-10px" : "-20px",
               letterSpacing: "0.1em"
             }}
           >
@@ -153,7 +153,7 @@ function Home() {
               marginBottom: isMobile ? "20px" : "0px",
               textAlign: "center"
             }}
-          ></h2>
+          >DEVELOPMENT</h2>
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
