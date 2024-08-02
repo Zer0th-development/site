@@ -248,11 +248,6 @@ function Home() {
 
       
 
-      <div style={{ display:'flex', flexDirection:'row', gap:'40px', width:'100%', marginBottom:'20px' }}>
-      <PackageCard />
-      <PackageCard />
-      <PackageCard />
-      </div>
       <div className="mt-10 mb-20">
       <Carousel duration="15s" />
       <Companies duration="20s" reverse={true} />
