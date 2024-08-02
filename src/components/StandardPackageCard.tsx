@@ -8,7 +8,8 @@ const StandardPackageCard = () => {
     const secondColor = "#ffffff";
   return (
     <div
-    style={{ fontFamily: "'Shippori Antique B1', sans-serif", height: '800px', width:'475px', alignItems: 'center', justifyContent: 'center'}} 
+      style={{ fontFamily: "'Shippori Antique B1', sans-serif" }}
+      className="flex items-center justify-center w-full sm:w-[475px] h-[800px]"
     >
       <NeonGradientCard
         neonColors={{ firstColor, secondColor }}

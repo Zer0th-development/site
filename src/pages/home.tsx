@@ -90,7 +90,8 @@ function Home() {
         justifyContent: "space-between",
         alignItems: "center",
         gap: "20px",
-        overflowY: "auto"
+        overflowY: "auto",
+        overflowX: "hidden"
       }}
     >
       <div

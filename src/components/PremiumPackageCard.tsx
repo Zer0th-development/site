@@ -1,27 +1,20 @@
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
 import "../App.css";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import PremiumBadge from "./PremiumBadge";
 
-const StandardPackageCard = () => {
+const PremiumPackageCard = () => {
   const firstColor = "#e3e3e3";
   const secondColor = "#00FF47";
   return (
     <div
-      style={{
-        fontFamily: "'Shippori Antique B1', sans-serif",
-        height: "800px",
-        width: "475px",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
+      style={{ fontFamily: "'Shippori Antique B1', sans-serif" }}
+      className="flex items-center justify-center w-full sm:w-[475px] h-[800px]"
     >
       <NeonGradientCard
         neonColors={{ firstColor, secondColor }}
         borderSize={2}
         borderRadius={15}
       >
-        <PremiumBadge></PremiumBadge>
         <h1 className="text-4xl font-bold text-center mb-6">
           Fully Managed Subscription
         </h1>
@@ -59,4 +52,4 @@ const StandardPackageCard = () => {
   );
 };
 
-export default StandardPackageCard;
+export default PremiumPackageCard;
