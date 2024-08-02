@@ -26,7 +26,7 @@ interface ServicesProps {
   isMobile: boolean;
 }
 
-const Services: React.FC<ServicesProps> = ({ isMobile }) => {
+const Services = ({ isMobile }: ServicesProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (

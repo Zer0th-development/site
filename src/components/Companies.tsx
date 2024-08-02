@@ -12,11 +12,11 @@ interface CompaniesProps {
   reverse?: boolean;
 }
 
-const Companies: React.FC<CompaniesProps> = ({
+const Companies = ({
   duration = "15s",
   pauseOnHover = true,
   reverse = false
-}) => {
+}: CompaniesProps) => {
   const companiesItems = [
     { src: companyImage1, alt: "Image One" },
     { src: companyImage2, alt: "Image Two" },

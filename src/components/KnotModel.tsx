@@ -3,7 +3,7 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { Mesh, MeshStandardMaterial, Color } from "three";
 
-const KnotModel: React.FC = () => {
+const KnotModel = () => {
   const primitiveRef = useRef<Mesh>(null);
   const obj = useLoader(OBJLoader, "/torusknot1.obj");
 

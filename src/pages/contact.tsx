@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",

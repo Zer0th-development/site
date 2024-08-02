@@ -5,7 +5,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 
 
 
-const StandardPackageCard: React.FC = () => {
+const StandardPackageCard = () => {
         const firstColor = "#e3e3e3";
         const secondColor = "#5403FF";
     return (

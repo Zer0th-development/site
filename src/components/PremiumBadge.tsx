@@ -7,10 +7,7 @@ interface PremiumBadgeProps {
   className?: string;
 }
 
-const PremiumBadge: React.FC<PremiumBadgeProps> = ({
-  text = "Premium",
-  className
-}) => {
+const PremiumBadge = ({ text = "Premium", className }: PremiumBadgeProps) => {
   return (
     <div
       style={{

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import companies from "../assets/Companies.png";
 
-const Portfolio: React.FC = () => {
+const Portfolio = () => {
   const navigate = useNavigate();
 
   return (

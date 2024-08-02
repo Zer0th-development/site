@@ -7,10 +7,10 @@ interface StandardBadgeProps {
   className?: string;
 }
 
-const StandardBadge: React.FC<StandardBadgeProps> = ({
+const StandardBadge = ({
   text = "Standard",
   className
-}) => {
+}: StandardBadgeProps) => {
   return (
     <div
       style={{

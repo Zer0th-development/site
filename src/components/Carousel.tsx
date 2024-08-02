@@ -10,10 +10,7 @@ interface CarouselProps {
   pauseOnHover?: boolean;
 }
 
-const Carousel: React.FC<CarouselProps> = ({
-  duration = "15s",
-  pauseOnHover = true
-}) => {
+const Carousel = ({ duration = "15s", pauseOnHover = true }: CarouselProps) => {
   const carouselItems = [
     { src: one, alt: "Image One" },
     { src: two, alt: "Image Two" },

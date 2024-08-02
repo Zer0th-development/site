@@ -3,7 +3,7 @@ import "../App.css";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import PremiumBadge from "./PremiumBadge";
 
-const StandardPackageCard: React.FC = () => {
+const StandardPackageCard = () => {
   const firstColor = "#e3e3e3";
   const secondColor = "#00FF47";
   return (
