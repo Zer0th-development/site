@@ -7,6 +7,9 @@ import Services from "../components/services";
 import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
+import PackageCard from "../components/StandardPackageCard";
+
+
 
 function Home() {
   const navigate = useNavigate();
@@ -102,6 +105,7 @@ function Home() {
           textAlign: "center",
           width: "100%",
           height: isMobile ? "auto" : "90vh",
+          marginLeft: isMobile ? "0" : "10px",
         }}
       >
         <div
@@ -114,7 +118,7 @@ function Home() {
             pointerEvents: "none",
           }}
         >
-          <Canvas style={{ height: "100%", width: "100%", marginTop: "30px" }}>
+          <Canvas style={{ height: "100%", width: "100%", marginTop: "30px", marginLeft: isMobile ? "0px": "60px" }}>
             <ambientLight intensity={0} />
             <KnotModel />
             <Environment preset="sunset" />
@@ -242,10 +246,19 @@ function Home() {
         looking for help executing on their creative vision.
       </p>
 
+      
+
+      <div style={{ display:'flex', flexDirection:'row', gap:'40px', width:'100%', marginBottom:'20px' }}>
+      <PackageCard />
+      <PackageCard />
+      <PackageCard />
+      </div>
       <div className="mt-10 mb-20">
       <Carousel duration="15s" />
-      <Companies duration="15s" reverse={true} />
+      <Companies duration="20s" reverse={true} />
       </div>
+
+      
 
       <h2
         style={{

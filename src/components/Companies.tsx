@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import Marquee from "../@/components/magicui/marquee";
 import companyImage1 from "../assets/companies/1.png";
 import companyImage2 from "../assets/companies/2.png";
@@ -25,8 +25,15 @@ const Companies: React.FC<CompaniesProps> = ({
     { src: companyImage5, alt: "Image Three" },
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const isMobile = windowWidth <= 768;
+
   return (
-    <div className="w-full relative overflow-hidden bg-black">
+    <div 
+    style={{width: isMobile ? "48vh" : "100%"}}
+    className="w-full relative overflow-hidden bg-black"
+    >
       <div className="absolute top-0 left-0 w-1/6 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
       <div className="absolute top-0 right-0 w-1/6 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
       <Marquee 

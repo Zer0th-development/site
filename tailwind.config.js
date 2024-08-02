@@ -58,6 +58,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "background-position-spin": {
+          "0%": { backgroundPosition: "top center" },
+          "100%": { backgroundPosition: "bottom center" },
+        },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -67,17 +71,28 @@ module.exports = {
           to: { height: 0 },
         },
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        shimmer: {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
         },
       },
       animation: {
+        backgroundPositionSpin:
+          "background-position-spin 3000ms infinite alternate",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee var(--duration, 60s) linear infinite",
         "marquee-reverse": "marquee var(--duration, 60s) linear infinite reverse",
+        shimmer: "shimmer 1s infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
