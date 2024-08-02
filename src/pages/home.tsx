@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import KnotModel from "../components/KnotModel";
 import Services from "../components/services";
-// import Packages from "../components/packages";
+import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
 import ShimmerButton from "../components/magicui/shimmer-button";
@@ -20,20 +20,20 @@ function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (canvas) {
-      const preventDefault = (e: Event) => e.preventDefault();
-      canvas.addEventListener("wheel", preventDefault, { passive: true });
-      canvas.addEventListener("touchmove", preventDefault, { passive: true });
-      canvas.addEventListener("click", preventDefault);
-      return () => {
-        canvas.removeEventListener("wheel", preventDefault);
-        canvas.removeEventListener("touchmove", preventDefault);
-        canvas.removeEventListener("click", preventDefault);
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
+  //   if (canvas) {
+  //     const preventDefault = (e: Event) => e.preventDefault();
+  //     canvas.addEventListener("wheel", preventDefault, { passive: true });
+  //     canvas.addEventListener("touchmove", preventDefault, { passive: true });
+  //     canvas.addEventListener("click", preventDefault);
+  //     return () => {
+  //       canvas.removeEventListener("wheel", preventDefault);
+  //       canvas.removeEventListener("touchmove", preventDefault);
+  //       canvas.removeEventListener("click", preventDefault);
+  //     };
+  //   }
+  // }, []);
 
   useEffect(() => {
     document.body.style.overflow = "auto";
@@ -292,7 +292,7 @@ function Home() {
         complex project, we have the team and resources to meet your needs.
       </p>
 
-      {/* <Packages /> */}
+      <Packages />
     </div>
   );
 }

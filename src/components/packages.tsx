@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StandardPackageCard from "./StandardPackageCard";
-// import PremiumPackageCard from "./PremiumPackageCard";
-// import CustomPackageCard from "./CustomPackageCard";
+import PremiumPackageCard from "./PremiumPackageCard";
+import CustomPackageCard from "./CustomPackageCard";
 
 const Packages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,9 @@ const Packages = () => {
   };
 
   const packageComponents = [
-    StandardPackageCard
+    StandardPackageCard,
+    PremiumPackageCard,
+    CustomPackageCard
   ];
 
   return (

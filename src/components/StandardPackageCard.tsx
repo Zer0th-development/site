@@ -13,8 +13,8 @@ const StandardPackageCard = () => {
     >
       <NeonGradientCard
         neonColors={{ firstColor, secondColor }}
-        // borderSize={2}
-        // borderRadius={15}
+        borderSize={2}
+        borderRadius={15}
       >
         {/* <StandardBadge /> */}
 
