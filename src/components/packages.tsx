@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StandardPackageCard from "./StandardPackageCard";
-import PremiumPackageCard from "./PremiumPackageCard";
-import CustomPackageCard from "./CustomPackageCard";
+// import PremiumPackageCard from "./PremiumPackageCard";
+// import CustomPackageCard from "./CustomPackageCard";
 
 const Packages = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,11 +15,8 @@ const Packages = () => {
     setCurrentIndex(prevIndex => (prevIndex - 1 + 3) % 3);
   };
 
-
   const packageComponents = [
-    StandardPackageCard,
-    PremiumPackageCard,
-    CustomPackageCard
+    StandardPackageCard
   ];
 
   return (
@@ -34,8 +31,8 @@ const Packages = () => {
       className="relative w-full h-80"
     >
       <div className="absolute inset-0 flex items-center justify-center">
-        {[0, 1, 2].map(index => {
-          const PackageComponent = packageComponents[index];
+        {packageComponents.map((component, index) => {
+          const PackageComponent = component;
           return (
             <div
               key={index}
