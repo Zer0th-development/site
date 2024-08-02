@@ -7,6 +7,7 @@ import Services from "../components/services";
 import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
+import ShimmerButton from "../components/magicui/shimmer-button";
 
 function Home() {
   const navigate = useNavigate();
@@ -181,28 +182,13 @@ function Home() {
                 marginBottom: isMobile ? "100px" : "0"
               }}
             >
-              <button
+              <ShimmerButton
+                shimmerSize="2px"
+                className={`bg-black text-white text-lg cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${isMobile ? '2.5' : '0'} transition-all duration-300 ease-in-out`}
                 onClick={handleWhoWeAreClick}
-                style={{
-                  backgroundColor: "#000000",
-                  color: "#FFFFFF",
-                  fontSize: "20px",
-                  cursor: "pointer",
-                  padding: "5px 5px",
-                  width: "190px",
-                  borderRadius: "30px",
-                  border: "2px solid #FFFFFF",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  marginBottom: isMobile ? "10px" : "0",
-                  transition: "all 0.3s ease",
-                  fontFamily: "'Shippori Antique B1', sans-serif"
-                }}
               >
                 Who we are
-              </button>
+              </ShimmerButton>
               <button
                 onClick={handleContactClick}
                 style={{
