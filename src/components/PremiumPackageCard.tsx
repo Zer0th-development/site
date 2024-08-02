@@ -1,36 +1,40 @@
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
-import '../App.css';
+import "../App.css";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
-
-
 const StandardPackageCard: React.FC = () => {
-    const firstColor = "#e3e3e3";
-    const secondColor = "#652A94";
+  const firstColor = "#e3e3e3";
+  const secondColor = "#652A94";
   return (
     <div
-    style={{ fontFamily: "'Shippori Antique B1', sans-serif", height: '700px', width:'400px', alignItems: 'center', justifyContent: 'center'}} 
+      style={{
+        fontFamily: "'Shippori Antique B1', sans-serif",
+        height: "700px",
+        width: "400px",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
     >
-    <NeonGradientCard 
-      neonColors={{ firstColor, secondColor }}
-      borderSize={2}
-      borderRadius={15}
-    >
-         <h1 className="text-4xl font-bold text-center mb-6">Project</h1>
-        
+      <NeonGradientCard
+        neonColors={{ firstColor, secondColor }}
+        borderSize={2}
+        borderRadius={15}
+      >
+        <h1 className="text-4xl font-bold text-center mb-6">Project</h1>
+
         <h2 className="text-xl font-semibold mb-2">You Need:</h2>
         <ul className="text-gray-400 space-y-3 ml-7 mb-2">
           {[
             "To Build a new (or rebuild) website, app or software solution",
             "Brand oriented & user friendly UI/UX",
-            "Integrations with essential apps & extensions",
+            "Integrations with essential apps & extensions"
           ].map((item, index) => (
             <li key={index} className="flex items-start">
               <span>{item}</span>
             </li>
           ))}
         </ul>
-        
+
         <h2 className="text-xl font-semibold mb-2">Includes:</h2>
         <ul className="text-gray-400 space-y-3">
           {[
@@ -46,10 +50,9 @@ const StandardPackageCard: React.FC = () => {
             </li>
           ))}
         </ul>
-      
-    </NeonGradientCard>
+      </NeonGradientCard>
     </div>
   );
-}
+};
 
 export default StandardPackageCard;

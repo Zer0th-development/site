@@ -8,8 +8,6 @@ import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
 
-
-
 function Home() {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -51,7 +49,7 @@ function Home() {
 
     window.scrollTo({
       top: window.scrollY + scrollDistance,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
   const handleContactClick = () => navigate("/contact");
@@ -61,7 +59,7 @@ function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const viewportHeight = window.innerHeight;
-      const textElement = document.getElementById('fade-in-text');
+      const textElement = document.getElementById("fade-in-text");
       if (textElement) {
         const elementTop = textElement.getBoundingClientRect().top;
         if (elementTop < viewportHeight * 0.75) {
@@ -91,10 +89,9 @@ function Home() {
         justifyContent: "space-between",
         alignItems: "center",
         gap: "20px",
-        overflowY: "auto",
+        overflowY: "auto"
       }}
     >
-
       <div
         style={{
           display: "flex",
@@ -104,7 +101,7 @@ function Home() {
           textAlign: "center",
           width: "100%",
           height: isMobile ? "auto" : "90vh",
-          marginLeft: isMobile ? "0" : "10px",
+          marginLeft: isMobile ? "0" : "10px"
         }}
       >
         <div
@@ -114,10 +111,17 @@ function Home() {
             width: isMobile ? "450px" : "800px",
             marginBottom: isMobile ? "-100px" : "0",
             order: isMobile ? 0 : 1,
-            pointerEvents: "none",
+            pointerEvents: "none"
           }}
         >
-          <Canvas style={{ height: "100%", width: "100%", marginTop: "30px", marginLeft: isMobile ? "0px": "60px" }}>
+          <Canvas
+            style={{
+              height: "100%",
+              width: "100%",
+              marginTop: "30px",
+              marginLeft: isMobile ? "0px" : "60px"
+            }}
+          >
             <ambientLight intensity={0} />
             <KnotModel />
             <Environment preset="sunset" />
@@ -129,7 +133,7 @@ function Home() {
             textAlign: isMobile ? "center" : "left",
             marginLeft: isMobile ? "0" : "40px",
             order: isMobile ? 1 : 0,
-            zIndex: 5,
+            zIndex: 5
           }}
         >
           <h1
@@ -137,7 +141,7 @@ function Home() {
               fontSize: isMobile ? "36px" : "80px",
               fontWeight: "normal",
               marginBottom: isMobile ? "-20px" : "0px",
-              letterSpacing: "0.1em",
+              letterSpacing: "0.1em"
             }}
           >
             ZEROTH
@@ -147,16 +151,15 @@ function Home() {
               fontSize: isMobile ? "22px" : "47px",
               fontWeight: "normal",
               marginBottom: isMobile ? "20px" : "0px",
-              textAlign: 'center',
+              textAlign: "center"
             }}
-          >
-          </h2>
+          ></h2>
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
               marginBottom: "40px",
               fontWeight: "400",
-              textAlign: "center",
+              textAlign: "center"
             }}
           >
             A Software & Design Studio
@@ -166,7 +169,7 @@ function Home() {
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
               gap: "20px",
-              alignItems: isMobile ? "center" : "flex-start",
+              alignItems: isMobile ? "center" : "flex-start"
             }}
           >
             <div
@@ -175,7 +178,7 @@ function Home() {
                 flexDirection: isMobile ? "column" : "row",
                 gap: "10px",
                 alignItems: isMobile ? "center" : "center",
-                marginBottom: isMobile ? "100px" : "0",
+                marginBottom: isMobile ? "100px" : "0"
               }}
             >
               <button
@@ -195,7 +198,7 @@ function Home() {
                   textDecoration: "none",
                   marginBottom: isMobile ? "10px" : "0",
                   transition: "all 0.3s ease",
-                  fontFamily: "'Shippori Antique B1', sans-serif",
+                  fontFamily: "'Shippori Antique B1', sans-serif"
                 }}
               >
                 Who we are
@@ -217,7 +220,7 @@ function Home() {
                   textDecoration: "none",
                   marginBottom: isMobile ? "10px" : "0",
                   transition: "all 0.3s ease",
-                  fontFamily: "'Shippori Antique B1', sans-serif",
+                  fontFamily: "'Shippori Antique B1', sans-serif"
                 }}
               >
                 Contact
@@ -230,35 +233,31 @@ function Home() {
       <p
         id="fade-in-text"
         className={`transition-opacity duration-1000 ease-in-out ${
-          isVisible ? 'opacity-100' : 'opacity-0'
+          isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{
           fontSize: isMobile ? "16px" : "26px",
           marginBottom: "40px",
           marginTop: "100px",
           textAlign: "center",
-          maxWidth: "840px",
+          maxWidth: "840px"
         }}
       >
         We craft bespoke solutions tailored to each client's unique needs
-        specializing in work with creators, artists and entrepreneurs
-        looking for help executing on their creative vision.
+        specializing in work with creators, artists and entrepreneurs looking
+        for help executing on their creative vision.
       </p>
 
-      
-
       <div className="mt-10 mb-20">
-      <Carousel duration="15s" />
-      <Companies duration="20s" reverse={true} />
+        <Carousel duration="15s" />
+        <Companies duration="20s" reverse={true} />
       </div>
-
-      
 
       <h2
         style={{
           fontSize: isMobile ? "18px" : "40px",
           fontWeight: "normal",
-          marginBottom: isMobile ? "-20px" : "-10px",
+          marginBottom: isMobile ? "-20px" : "-10px"
         }}
       >
         {" "}
@@ -269,7 +268,7 @@ function Home() {
           fontSize: isMobile ? "16px" : "26px",
           marginBottom: "10px",
           textAlign: "center",
-          maxWidth: "850px",
+          maxWidth: "850px"
         }}
       >
         Each client receives weekly development and design meetings throughout
@@ -283,7 +282,7 @@ function Home() {
         style={{
           fontSize: isMobile ? "18px" : "40px",
           fontWeight: "normal",
-          marginBottom: isMobile ? "-20px" : "-10px",
+          marginBottom: isMobile ? "-20px" : "-10px"
         }}
       >
         {" "}
@@ -294,7 +293,7 @@ function Home() {
           fontSize: isMobile ? "16px" : "26px",
           marginBottom: "10px",
           textAlign: "center",
-          maxWidth: "850px",
+          maxWidth: "850px"
         }}
       >
         Whether you need to complete a single project, optimize and manage your

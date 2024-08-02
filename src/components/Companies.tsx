@@ -12,17 +12,17 @@ interface CompaniesProps {
   reverse?: boolean;
 }
 
-const Companies: React.FC<CompaniesProps> = ({ 
-  duration = "15s", 
+const Companies: React.FC<CompaniesProps> = ({
+  duration = "15s",
   pauseOnHover = true,
-  reverse = false 
+  reverse = false
 }) => {
   const companiesItems = [
     { src: companyImage1, alt: "Image One" },
     { src: companyImage2, alt: "Image Two" },
     { src: companyImage3, alt: "Image Three" },
     { src: companyImage4, alt: "Image Three" },
-    { src: companyImage5, alt: "Image Three" },
+    { src: companyImage5, alt: "Image Three" }
   ];
 
   const [windowWidth] = useState(window.innerWidth);
@@ -30,23 +30,23 @@ const Companies: React.FC<CompaniesProps> = ({
   const isMobile = windowWidth <= 768;
 
   return (
-    <div 
-    style={{width: isMobile ? "48vh" : "100%"}}
-    className="w-full relative overflow-hidden bg-black"
+    <div
+      style={{ width: isMobile ? "48vh" : "100%" }}
+      className="w-full relative overflow-hidden bg-black"
     >
       <div className="absolute top-0 left-0 w-1/6 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
       <div className="absolute top-0 right-0 w-1/6 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
-      <Marquee 
-        className="py-4" 
+      <Marquee
+        className="py-4"
         pauseOnHover={pauseOnHover}
         reverse={reverse}
         style={{ "--duration": duration } as React.CSSProperties}
       >
         {companiesItems.map((item, index) => (
           <div key={index} className="mx-4 inline-block">
-            <img 
-              src={item.src} 
-              alt={item.alt} 
+            <img
+              src={item.src}
+              alt={item.alt}
               className="h-20 w-auto object-contain"
             />
           </div>

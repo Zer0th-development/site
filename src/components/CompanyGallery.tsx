@@ -9,11 +9,11 @@ const companyImages = [
   companyImage2,
   companyImage3,
   companyImage4,
-  companyImage5,
+  companyImage5
 ];
 
 const ImageGallery = () => (
-  <div style={{ display: "flex", gap: "20px", flexDirection: "row"  }}>
+  <div style={{ display: "flex", gap: "20px", flexDirection: "row" }}>
     {companyImages.map((src, index) => (
       <img
         key={index}
@@ -23,7 +23,7 @@ const ImageGallery = () => (
           width: "100%",
           height: "100px",
           objectFit: "contain",
-          marginBottom: "40px",
+          marginBottom: "40px"
         }}
       />
     ))}
