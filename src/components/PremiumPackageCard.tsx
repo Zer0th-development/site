@@ -81,25 +81,23 @@ const PremiumPackageCard = () => {
           ))}
         </ul>
 
-<div className="flex flex-col items-center justify-center space-y-4">
-  <div className="text-center">
-    <div className="text-lg text-gray-400 mb-1">
-      Starting At
+  <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="text-center">
+      <div className="text-lg text-gray-400 mb-1">
+        Starting At
+      </div>
+      <div className="text-3xl text-white">
+        $10,000/month
+      </div>
     </div>
-    <div className="text-3xl text-white">
-      $10,000/month
-    </div>
-  </div>
-  <ShimmerButton
-    shimmerSize="3px"
-    shimmerColor="#00FF47"
-    className="bg-black text-white text-lg cursor-pointer px-6 py-2 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline transition-all duration-300 ease-in-out"
-  >
-    Get Started <IoMdArrowRoundForward className="ml-2" />
-  </ShimmerButton>
-</div>
-
-            
+        <ShimmerButton
+          shimmerSize="3px"
+          shimmerColor="#00FF47"
+          className="bg-black text-white text-lg cursor-pointer px-6 py-2 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline transition-all duration-300 ease-in-out"
+        >
+          Get Started <IoMdArrowRoundForward className="ml-2" />
+        </ShimmerButton>
+    </div>      
       </NeonGradientCard>
     </div>
   );
