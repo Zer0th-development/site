@@ -17,6 +17,9 @@ module.exports = {
       }
     },
     extend: {
+      fontFamily: {
+        sans: ['SF Pro Display', 'sans-serif'],
+      },
       translate: {
         "1/6": "16.666667%",
         "1/5": "20%"
@@ -62,6 +65,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)"
       },
       keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
         "shine-pulse": {
           "0%": {
             "background-position": "0% 0%"
@@ -118,6 +126,7 @@ module.exports = {
         }
       },
       animation: {
+        gradient: "gradient 8s linear infinite",
         backgroundPositionSpin:
           "background-position-spin 3000ms infinite alternate",
         "accordion-down": "accordion-down 0.2s ease-out",

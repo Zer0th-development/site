@@ -8,6 +8,8 @@ import Packages from "../components/packages";
 import Carousel from "../components/Carousel";
 import Companies from "../components/Companies";
 import ShimmerButton from "../components/magicui/shimmer-button";
+import { IoMdArrowRoundForward, IoMdArrowRoundDown } from "react-icons/io";
+import '../fonts.css';
 
 function Home() {
   const navigate = useNavigate();
@@ -82,7 +84,7 @@ function Home() {
       style={{
         backgroundColor: "#000000",
         color: "#FFFFFF",
-        fontFamily: "'Shippori Antique B1', sans-serif",
+        fontFamily: "SF Pro Display, sans-serif",
         minHeight: "100vh",
         padding: isMobile ? "5%" : "0 5%",
         display: "flex",
@@ -132,7 +134,7 @@ function Home() {
         </div>
         <div
           style={{
-            textAlign: isMobile ? "center" : "left",
+            textAlign: isMobile ? "center" : "center",
             marginLeft: isMobile ? "0" : "40px",
             order: isMobile ? 1 : 0,
             zIndex: 5
@@ -148,7 +150,7 @@ function Home() {
           >
             ZEROTH
           </h1>
-          <h2
+          {/* <h2
             style={{
               fontSize: isMobile ? "22px" : "47px",
               fontWeight: "normal",
@@ -157,7 +159,7 @@ function Home() {
             }}
           >
             DEVELOPMENT
-          </h2>
+          </h2> */}
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
@@ -188,12 +190,12 @@ function Home() {
               <ShimmerButton
                 shimmerSize="3px"
                 shimmerColor="#A3A3A3"
-                className={`bg-black text-white text-lg cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${
+                className={`bg-black text-white text-xl cursor-pointer p-1.5 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline mb-${
                   isMobile ? "2.5" : "0"
                 } transition-all duration-300 ease-in-out`}
                 onClick={handleWhoWeAreClick}
               >
-                Who we are
+                Who we are <IoMdArrowRoundDown className=" ml-2 mt-1" />
               </ShimmerButton>
               <button
                 onClick={handleContactClick}
@@ -215,7 +217,7 @@ function Home() {
                   fontFamily: "'Shippori Antique B1', sans-serif"
                 }}
               >
-                Contact
+                Contact <IoMdArrowRoundForward className="mt-1 ml-1" />
               </button>
             </div>
           </div>
@@ -242,6 +244,7 @@ function Home() {
 
       <div className="mt-10 mb-20">
         <Carousel duration="15s" />
+        <p></p>
         <Companies duration="20s" reverse={true} />
       </div>
 
