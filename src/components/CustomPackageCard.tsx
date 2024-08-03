@@ -67,7 +67,7 @@ const CustomPackageCard = () => {
         Starting At
       </div>
       <div className="text-3xl text-white">
-        $5,000
+      ∞
       </div>
     </div>
         <ShimmerButton
