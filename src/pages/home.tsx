@@ -243,9 +243,9 @@ function Home() {
       </p>
 
       <div className="mt-10 mb-20">
-        <Carousel duration="15s" />
+      <Carousel duration="15s" pauseOnHover={false} />
         <p></p>
-        <Companies duration="20s" reverse={true} />
+        <Companies duration="20s" reverse={true} pauseOnHover={false} />
       </div>
 
       <h2

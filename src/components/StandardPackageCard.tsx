@@ -20,11 +20,11 @@ const StandardPackageCard = () => {
             viaColor={secondColor}
             toColor={firstColor}
           >
-            <span
+            <div
               className={cn(`inline animate-gradient bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}
             >
               Standard
-            </span>
+            </div>
           </AnimatedGradientText>
         </div>
       </div>
