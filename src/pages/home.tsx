@@ -144,7 +144,6 @@ function Home() {
             style={{
               fontSize: isMobile ? "36px" : "80px",
               fontWeight: "normal",
-              marginBottom: isMobile ? "-10px" : "-20px",
               letterSpacing: "0.1em"
             }}
           >
@@ -163,7 +162,7 @@ function Home() {
           <p
             style={{
               fontSize: isMobile ? "16px" : "26px",
-              marginBottom: "40px",
+              marginBottom: "20px",
               fontWeight: "400",
               textAlign: "center"
             }}
@@ -237,7 +236,7 @@ function Home() {
           maxWidth: "840px"
         }}
       >
-        We craft bespoke solutions tailored to each client's unique needs
+        We craft tailored solutions for each client's unique needs
         specializing in work with creators, artists and entrepreneurs looking
         for help executing on their creative vision.
       </p>
@@ -295,7 +294,7 @@ function Home() {
         complex project, we have the team and resources to meet your needs.
       </p>
 
-      <Packages />
+      <Packages isMobile={isMobile} />
     </div>
   );
 }
