@@ -85,7 +85,7 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
         Starting At
       </div>
       <div className={`${isMobile ? "text-3xl" : "text-3xl"} text-white`}>
-        $5,000
+        $7,500
       </div>
       <div style={{ borderRadius: '20px', background: '#ffffff', border: '#00FF47', color:"black", borderWidth: '2px', padding: '2px 8px', marginTop: '4px'}}>
         One-Time
