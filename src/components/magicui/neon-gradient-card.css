@@ -8,17 +8,6 @@
     }
 }
 
-.neon-gradient-card {
-    transform: translateZ(0);
-}
-
-.force-gpu {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-}
-
-
 .neon-gradient-card::before {
     content: '';
     position: absolute;
@@ -30,7 +19,6 @@
     border-radius: var(--border-radius);
     z-index: -1;
     background-size: 100% 200%;
-    animation: slideGradient 3s linear infinite steps(20,end);
 }
 
 .neon-gradient-card::after {
@@ -46,5 +34,13 @@
     filter: blur(var(--after-blur));
     opacity: 0.8;
     background-size: 100% 200%;
-    animation: slideGradient 3s linear infinite;
+}
+
+/* Enable animation only on desktop screens */
+@media (min-width: 1024px) {
+
+    .neon-gradient-card::before,
+    .neon-gradient-card::after {
+        animation: slideGradient 3s linear infinite;
+    }
 }
