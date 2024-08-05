@@ -84,7 +84,7 @@ const NeonGradientCard = ({
       }
       className={cn(
         "relative z-10 h-full w-full rounded-[var(--border-radius)]",
-        "neon-gradient-card force-gpu",
+        "neon-gradient-card",
         className
       )}
       {...props}
