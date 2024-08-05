@@ -45,7 +45,7 @@ const Packages: React.FC<PackagesProps> = ({ isMobile }) => {
             style={{
               transform: "scale(0.85)",
               width: "100%",
-              maxWidth: "300px",
+              maxWidth: "400px",
             }}
           >
             <PackageComponent />
