@@ -1,39 +1,46 @@
-/* /* @keyframes slideGradient {
-    0% {
-        background-position: 0% 0%;
-    }
+.neon-gradient-card {
+    --gradient-y: 0%;
+    animation: slide-gradient 3s linear infinite;
+}
 
-    100% {
-        background-position: 0% 200%;
+@property --gradient-y {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+@keyframes slide-gradient {
+    to {
+        --gradient-y: 100%;
     }
-} */
+}
 
 .neon-gradient-card::before {
     content: '';
     position: absolute;
-    top: calc(-1 * var(--border-size));
-    left: calc(-1 * var(--border-size));
-    right: calc(-1 * var(--border-size));
-    bottom: calc(-1 * var(--border-size));
-    background: linear-gradient(0deg, var(--neon-first-color), var(--neon-second-color), var(--neon-first-color));
+    inset: calc(-1 * var(--border-size));
+    background: linear-gradient(0deg,
+            var(--neon-first-color) 0%,
+            var(--neon-second-color) 50%,
+            var(--neon-first-color) 100%);
+    background-size: 100% 200%;
+    background-position: 0 var(--gradient-y);
     border-radius: var(--border-radius);
     z-index: -1;
-    background-size: 100% 200%;
-    /* animation: slideGradient 3s linear infinite; */
 }
 
 .neon-gradient-card::after {
     content: '';
     position: absolute;
-    top: calc(-1 * var(--border-size));
-    left: calc(-1 * var(--border-size));
-    right: calc(-1 * var(--border-size));
-    bottom: calc(-1 * var(--border-size));
-    background: linear-gradient(0deg, var(--neon-first-color), var(--neon-second-color), var(--neon-first-color));
+    inset: calc(-1 * var(--border-size));
+    background: linear-gradient(0deg,
+            var(--neon-first-color) 0%,
+            var(--neon-second-color) 50%,
+            var(--neon-first-color) 100%);
+    background-size: 100% 200%;
+    background-position: 0 var(--gradient-y);
     border-radius: var(--border-radius);
     z-index: -2;
     filter: blur(var(--after-blur));
     opacity: 0.8;
-    background-size: 100% 200%;
-    /* animation: slideGradient 3s linear infinite; */
 }

@@ -69,19 +69,17 @@ const NeonGradientCard = ({
   return (
     <div
       ref={containerRef}
-      style={
-        {
-          "--border-size": `${borderSize}px`,
-          "--border-radius": `${borderRadius}px`,
-          "--neon-first-color": neonColors.firstColor,
-          "--neon-second-color": neonColors.secondColor,
-          "--card-width": `${dimensions.width}px`,
-          "--card-height": `${dimensions.height}px`,
-          "--card-content-radius": `${borderRadius - borderSize}px`,
-          "--after-blur": `${dimensions.width / 3}px`,
-          fontFamily: fontFamily
-        } as CSSProperties
-      }
+      style={{
+        "--border-size": `${borderSize}px`,
+        "--border-radius": `${borderRadius}px`,
+        "--neon-first-color": neonColors.firstColor,
+        "--neon-second-color": neonColors.secondColor,
+        "--card-width": `${dimensions.width}px`,
+        "--card-height": `${dimensions.height}px`,
+        "--card-content-radius": `${borderRadius - borderSize}px`,
+        "--after-blur": `${dimensions.width / 3}px`,
+        fontFamily: fontFamily
+      } as CSSProperties}
       className={cn(
         "relative z-10 h-full w-full rounded-[var(--border-radius)]",
         "neon-gradient-card",
