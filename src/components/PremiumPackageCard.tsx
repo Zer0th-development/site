@@ -1,5 +1,6 @@
 import React from "react";
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 import "../fonts.css";
 import { IoIosCheckmarkCircle, IoMdArrowRoundForward } from "react-icons/io";
@@ -12,8 +13,11 @@ interface PremiumPackageCardProps {
 }
 
 const PremiumPackageCard: React.FC<PremiumPackageCardProps> = ({ isMobile = false }) => {
+  const navigate = useNavigate();
   const firstColor = "#e3e3e3";
   const secondColor = "#00FF47";
+
+  const handleContactClick = () => navigate("/contact");
   
   return (
     <div className={`flex items-center justify-center relative`}>
@@ -102,6 +106,7 @@ const PremiumPackageCard: React.FC<PremiumPackageCardProps> = ({ isMobile = fals
           shimmerSize="3px"
           shimmerColor="#00FF47"
           className={`bg-black text-white ${isMobile ? "text-lg" : "text-lg"} cursor-pointer px-6 py-2 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline transition-all duration-300 ease-in-out mt-2`}
+          onClick={handleContactClick}
         >
           Get Started <IoMdArrowRoundForward className="ml-2" />
         </ShimmerButton>

@@ -1,5 +1,6 @@
 import React from "react";
 import { NeonGradientCard } from "./magicui/neon-gradient-card";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 import { IoIosCheckmarkCircle, IoMdArrowRoundForward } from "react-icons/io";
 import ShimmerButton from "../components/magicui/shimmer-button";
@@ -11,12 +12,17 @@ interface StandardPackageCardProps {
 }
 
 const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = false }) => {
+    const navigate = useNavigate();  
+  
     const firstColor = "#e3e3e3";
     const secondColor = "#ffffff";
+
+    const handleContactClick = () => navigate("/contact");
+
+    
   return (
     <div
-      style={{ fontFamily: "'Shippori Antique B1', sans-serif" }}
-      className={`flex items-center justify-center relative`}
+      className={` items-center justify-center relative`}
     >
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
         <div className="z-10 flex items-center justify-center">
@@ -37,9 +43,13 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
         neonColors={{ firstColor, secondColor }}
         borderSize={2}
         borderRadius={15}
-        className="relative h-180 z-10 sm:w-[475px]"
+        fontFamily="SF Pro Display, sans-serif"
+        className="relative z-10 sm:w-[475px] sm:h-[850px]"
       >
-        <h1 className={`${isMobile ? "text-3xl" : "text-4xl"} font-bold text-center mb-6`}>Project</h1>
+        <div 
+        style={{ fontWeight: "500", textAlign: "center" }}
+        className={`${isMobile ? "text-3xl" : "text-4xl"} text-center mb- mt-1`}
+        >Individual Project</div>
         <h2 className={`${isMobile ? "text-xl" : "text-2xl"} font-semibold mb-2`}>You Need:</h2>
         <ul className={`text-gray-400 space-y-3 ml-7 mb-2 ${isMobile ? "text-base" : "text-base"}`}>
           {[
@@ -52,7 +62,8 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
             </li>
           ))}
         </ul>
-        <h2 className={`${isMobile ? "text-xl" : "text-2xl"} font-semibold mb-2`}>Includes:</h2>
+        <div className={`${isMobile ? "mb-0" : "mb-44"}`}>
+        <h2 className={`${isMobile ? "text-xl" : "text-2xl"} font-semibold mb-1`}>Includes:</h2>
         <ul className={`text-gray-400 space-y-3 ${isMobile ? "text-base" : "text-base"}`}>
           {[
             "Development of your digital product",
@@ -66,20 +77,25 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
               <span>{item}</span>
             </li>
           ))}
-        </ul>
-    <div className="flex flex-col items-center justify-center space-y-3 mt-4">
-      <div className="text-center">
+        </ul> 
+        </div>
+    <div className={`${isMobile ? "mt-4" : "m-4"} flex flex-col items-center justify-center space-y-3`}>
+      <div className="text-center items-center">
       <div className={`${isMobile ? "text-lg" : "text-lg"} text-gray-400 mb-1`}>
         Starting At
       </div>
       <div className={`${isMobile ? "text-3xl" : "text-3xl"} text-white`}>
         $5,000
       </div>
+      <div style={{ borderRadius: '20px', background: '#ffffff', border: '#00FF47', color:"black", borderWidth: '2px', padding: '2px 8px', marginTop: '4px'}}>
+        One-Time
+      </div>
     </div>
         <ShimmerButton
           shimmerSize="3px"
-          shimmerColor="#00FF47"
+          shimmerColor="#e3e3e3"
           className={`bg-black text-white ${isMobile ? "text-lg" : "text-lg"} cursor-pointer px-6 py-2 w-48 rounded-full border-2 border-white inline-flex items-center justify-center no-underline transition-all duration-300 ease-in-out mt-2`}
+          onClick={handleContactClick}
         >
           Get Started <IoMdArrowRoundForward className="ml-2" />
         </ShimmerButton>

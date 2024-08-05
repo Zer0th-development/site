@@ -274,9 +274,8 @@ function Home() {
 
       <h2
         style={{
-          fontSize: isMobile ? "18px" : "40px",
+          fontSize: isMobile ? "28px" : "40px",
           fontWeight: "normal",
-          marginBottom: isMobile ? "-20px" : "-10px"
         }}
       >
         Packages

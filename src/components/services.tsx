@@ -8,17 +8,19 @@ import networkIcon from "../assets/icons/network.png";
 import peopleIcon from "../assets/icons/3person.png";
 import boxIcon from "../assets/icons/shippingbox.png";
 import trayIcon from "../assets/icons/tray.png";
+import scaleIcon from "../assets/icons/scale.3d.png";
+import wandIcon from "../assets/icons/wand.and.stars.png"
 
 const services = [
   { title: "Software, Website, and App Development", icon: laptopIcon },
-  { title: "Collaborative Brand-Oriented Design", icon: laptopIcon },
+  { title: "Collaborative Brand-Oriented Design", icon: scaleIcon },
   { title: "E-Commerce Solutions and Managment", icon: cardIcon },
   { title: "Daily Business Operations", icon: magnifyingGlassIcon },
   { title: "App and Extension Integration", icon: networkIcon },
   { title: "Customer Acquisition and Data Management", icon: peopleIcon },
   { title: "Digital Marketing and Advertising", icon: clickIcon },
   { title: "Product Sourcing, Distribution and Fulfilment", icon: boxIcon },
-  { title: "AI Finetuning and Implementation", icon: boxIcon },
+  { title: "AI Finetuning and Implementation", icon: wandIcon },
   { title: "CMS for Updates and Deployments", icon: trayIcon }
 ];
 
@@ -59,7 +61,6 @@ const Services = ({ isMobile }: ServicesProps) => {
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "'Shippori Antique B1', sans-serif",
-            // filter: hoveredIndex === index ? 'drop-shadow(0 0 10px #ffffff)' : 'none',
             transition: "filter 0.2s ease"
           }}
           onMouseEnter={() => setHoveredIndex(index)}
@@ -72,11 +73,8 @@ const Services = ({ isMobile }: ServicesProps) => {
               maxHeight: "50px",
               marginTop: "10px",
               marginBottom: "15px",
-              filter:
-                hoveredIndex === index
-                  ? "drop-shadow(0 0 2px #ffffff)"
-                  : "none",
-              transition: "filter 0.2s ease"
+              filter: hoveredIndex === index ? "brightness(0) invert(1) drop-shadow(0 0 4px #ffffff)" : "none",
+              transition: "filter 0.5s ease"
             }}
           />
           {service.title}
