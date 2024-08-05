@@ -8,6 +8,10 @@
     }
 }
 
+.neon-gradient-card {
+    transform: translateZ(0);
+}
+
 .neon-gradient-card::before {
     content: '';
     position: absolute;
@@ -20,7 +24,6 @@
     z-index: -1;
     background-size: 100% 200%;
     animation: slideGradient 3s linear infinite;
-    transform: rotateZ(360deg)
 }
 
 .neon-gradient-card::after {
@@ -37,5 +40,4 @@
     opacity: 0.8;
     background-size: 100% 200%;
     animation: slideGradient 3s linear infinite;
-    transform: rotateZ(360deg)
 }
