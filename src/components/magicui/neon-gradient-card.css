@@ -1,4 +1,4 @@
-@keyframes slideGradient {
+/* @keyframes slideGradient {
     0% {
         background-position: 0% 0%;
     }
@@ -36,4 +36,4 @@
     opacity: 0.8;
     background-size: 100% 200%;
     animation: slideGradient 3s linear infinite;
-}
+} */
