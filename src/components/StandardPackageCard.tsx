@@ -32,7 +32,7 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
             toColor={firstColor}
           >
             <div
-              className={cn(`inline animate-gradient bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}
+              className={cn(`inline animate-gradient bg-[#FFFFFF] bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text`,)}
             >
               Standard
             </div>

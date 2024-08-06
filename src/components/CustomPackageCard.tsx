@@ -24,7 +24,7 @@ const CustomPackageCard: React.FC<CustomPackageCardProps> = ({ isMobile = false 
         <div className="z-10 flex items-center justify-center">
           <AnimatedGradientText>
             <span
-              className={cn(`inline animate-gradient bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}
+              className={cn(`inline animate-gradient bg-[#FFFFFF] bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text`,)}
             >
               Custom
             </span>
