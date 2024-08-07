@@ -199,8 +199,8 @@ function Home() {
               <button
                 onClick={handleContactClick}
                 style={{
-                  backgroundColor: "#FFFFFF",
-                  color: "#000000",
+                  backgroundColor: "#000000",
+                  color: "#FFFFFF",
                   fontSize: "20px",
                   cursor: "pointer",
                   padding: "5px 20px",
@@ -213,7 +213,6 @@ function Home() {
                   textDecoration: "none",
                   marginBottom: isMobile ? "10px" : "0",
                   transition: "all 0.3s ease",
-                  fontFamily: "'Shippori Antique B1', sans-serif"
                 }}
               >
                 Contact <IoMdArrowRoundForward className="mt-1 ml-1" />
@@ -242,7 +241,7 @@ function Home() {
       </p>
 
       <div className="mt-10 mb-20">
-      <Carousel duration="15s" pauseOnHover={false} />
+      <Carousel duration="20s" pauseOnHover={false} />
         <p></p>
         <Companies duration="20s" reverse={true} pauseOnHover={false} />
       </div>

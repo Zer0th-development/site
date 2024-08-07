@@ -4,18 +4,22 @@ import one from "../assets/one.png";
 import two from "../assets/two.png";
 import three from "../assets/three.png";
 import clothesapp from "../assets/clothesapp.png";
+import mixapp from "../assets/mix.png";
+import TeslaHorns from "../assets/TeslaHorns.png";
 
 interface CarouselProps {
   duration?: string;
   pauseOnHover?: boolean;
 }
 
-const Carousel = ({ duration = "15s", pauseOnHover = true }: CarouselProps) => {
+const Carousel = ({ duration = "25s", pauseOnHover = false }: CarouselProps) => {
   const carouselItems = [
     { src: one, alt: "Image One" },
     { src: two, alt: "Image Two" },
     { src: three, alt: "Image Three" },
-    { src: clothesapp, alt: "Image Three" }
+    { src: clothesapp, alt: "Image Four" },
+    { src: mixapp, alt: "Image Five" },
+    { src: TeslaHorns, alt: "Image Six" }
   ];
 
   useEffect(() => {

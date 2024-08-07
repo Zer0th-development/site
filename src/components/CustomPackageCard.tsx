@@ -91,14 +91,12 @@ const CustomPackageCard: React.FC<CustomPackageCardProps> = ({ isMobile = false 
 
         <div className="mt-auto flex flex-col items-center justify-center space-y-3 pb-4">
           <div className="text-center">
-            <div className="text-base sm:text-lg text-gray-400 mb-1">
-              Starting At
-            </div>
+            
             <div className="text-6xl sm:text-6xl text-white">
-              ∞
+              
             </div>
-            <div style={{ borderRadius: '20px', background: '#ffffff', border: '#00FF47', color:"black", borderWidth: '2px', padding: '2px 8px', marginTop: '4px'}}>
-              Forever
+            <div style={{ minWidth: '80px', borderRadius: '20px', background: '#ffffff', border: '#00FF47', color:"black", borderWidth: '2px', padding: '2px 8px', marginTop: '4px'}}>
+            ∞
             </div>
           </div>
           <ShimmerButton

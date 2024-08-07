@@ -81,12 +81,6 @@ const StandardPackageCard: React.FC<StandardPackageCardProps> = ({ isMobile = fa
         </div>
     <div className={`${isMobile ? "mt-4" : "m-4"} flex flex-col items-center justify-center space-y-3`}>
       <div className="text-center items-center">
-      <div className={`${isMobile ? "text-lg" : "text-lg"} text-gray-400 mb-1`}>
-        Starting At
-      </div>
-      <div className={`${isMobile ? "text-3xl" : "text-3xl"} text-white`}>
-        $5,000
-      </div>
       <div style={{ borderRadius: '20px', background: '#ffffff', border: '#00FF47', color:"black", borderWidth: '2px', padding: '2px 8px', marginTop: '4px'}}>
         One-Time
       </div>
