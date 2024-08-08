@@ -1,4 +1,4 @@
-/* /* @keyframes slideGradient {
+@keyframes slideGradient {
     0% {
         background-position: 0% 0%;
     }
@@ -6,7 +6,7 @@
     100% {
         background-position: 0% 200%;
     }
-} */
+}
 
 .neon-gradient-card::before {
     content: '';
@@ -19,7 +19,6 @@
     border-radius: var(--border-radius);
     z-index: -1;
     background-size: 100% 200%;
-    /* animation: slideGradient 3s linear infinite; */
 }
 
 .neon-gradient-card::after {
@@ -35,5 +34,13 @@
     filter: blur(var(--after-blur));
     opacity: 0.8;
     background-size: 100% 200%;
-    /* animation: slideGradient 3s linear infinite; */
+}
+
+/* Enable animation only on desktop screens */
+@media (min-width: 1024px) {
+
+    .neon-gradient-card::before,
+    .neon-gradient-card::after {
+        animation: slideGradient 3s linear infinite;
+    }
 }

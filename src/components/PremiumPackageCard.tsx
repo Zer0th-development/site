@@ -29,7 +29,7 @@ const PremiumPackageCard: React.FC<PremiumPackageCardProps> = ({ isMobile = fals
             toColor={firstColor}
           >
             <span
-              className={cn(`inline animate-gradient bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}
+              className={cn(`inline animate-gradient bg-[#FFFFFF] bg-gradient-to-r from-[${firstColor}] via-[${secondColor}] to-[${firstColor}] bg-[length:var(--bg-size)_100%] bg-clip-text`,)}
             >
               Premium
             </span>
